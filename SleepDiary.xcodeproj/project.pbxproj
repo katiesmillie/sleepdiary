@@ -116,16 +116,12 @@
 			isa = PBXGroup;
 			children = (
 				2D649E6C1D09AC5900727CE8 /* AppDelegate.swift */,
-				2D649E6E1D09AC5900727CE8 /* DiaryTableViewController.swift */,
-				2D649E9D1D09AE6B00727CE8 /* DiaryEntry.swift */,
-				2D649EA71D0AE4FF00727CE8 /* DiaryViewModel.swift */,
 				2D649E701D09AC5900727CE8 /* Main.storyboard */,
-				2D649EA11D09E34200727CE8 /* DateTableViewCell.swift */,
-				2D649EA31D09E34F00727CE8 /* MoodTableViewCell.swift */,
-				2D649EAD1D0AF3FF00727CE8 /* TimeSleptTableViewCell.swift */,
-				2D649EA91D0AE9DB00727CE8 /* HabitsTableViewCell.swift */,
-				2D649EAF1D0AF96000727CE8 /* NotesTableViewCell.swift */,
-				2D649EAB1D0AEB1900727CE8 /* DiaryButton.swift */,
+				2DDDF49D1D0B1D4900A91E21 /* Controllers */,
+				2DDDF49A1D0B1D1E00A91E21 /* TableViewCells */,
+				2DDDF49E1D0B1D5F00A91E21 /* CustomViews */,
+				2DDDF49C1D0B1D3D00A91E21 /* ViewModels */,
+				2DDDF49B1D0B1D2F00A91E21 /* Models */,
 				2D649E761D09AC5900727CE8 /* Assets.xcassets */,
 				2D649E781D09AC5900727CE8 /* LaunchScreen.storyboard */,
 				2D649E7B1D09AC5900727CE8 /* Info.plist */,
@@ -150,6 +146,50 @@
 				2D649E911D09AC5A00727CE8 /* Info.plist */,
 			);
 			path = SleepDiaryUITests;
+			sourceTree = "<group>";
+		};
+		2DDDF49A1D0B1D1E00A91E21 /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				2D649EA11D09E34200727CE8 /* DateTableViewCell.swift */,
+				2D649EA31D09E34F00727CE8 /* MoodTableViewCell.swift */,
+				2D649EAD1D0AF3FF00727CE8 /* TimeSleptTableViewCell.swift */,
+				2D649EA91D0AE9DB00727CE8 /* HabitsTableViewCell.swift */,
+				2D649EAF1D0AF96000727CE8 /* NotesTableViewCell.swift */,
+			);
+			name = TableViewCells;
+			sourceTree = "<group>";
+		};
+		2DDDF49B1D0B1D2F00A91E21 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2D649E9D1D09AE6B00727CE8 /* DiaryEntry.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		2DDDF49C1D0B1D3D00A91E21 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				2D649EA71D0AE4FF00727CE8 /* DiaryViewModel.swift */,
+			);
+			name = ViewModels;
+			sourceTree = "<group>";
+		};
+		2DDDF49D1D0B1D4900A91E21 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2D649E6E1D09AC5900727CE8 /* DiaryTableViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		2DDDF49E1D0B1D5F00A91E21 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				2D649EAB1D0AEB1900727CE8 /* DiaryButton.swift */,
+			);
+			name = CustomViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

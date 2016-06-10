@@ -16,6 +16,10 @@ public class DiaryViewModel {
         self.diaryEntry = entry
     }
     
+    public var date: NSDate? {
+        return diaryEntry.date ?? nil
+    }
+    
     public var timeSlept: TimeSlept? {
         return diaryEntry.timeSlept ?? nil
     }
@@ -28,11 +32,11 @@ public class DiaryViewModel {
         return diaryEntry.wakeUpMood ?? nil
     }
     
-    public var habits: Habit? {
+    public var habits: [Habit]? {
         return diaryEntry.habits ?? nil
     }
     
-    public var meds: Medication? {
+    public var meds: [Medication]? {
         return diaryEntry.meds ?? nil
     }
     

@@ -11,9 +11,22 @@ import XCTest
 
 class SleepDiaryTests: XCTestCase {
     
+    var diaryViewModel: DiaryViewModel?
+    let date1 = NSDate.init(timeIntervalSince1970: 1465401184000) // 6/8/2016, 11:53:04 AM
+    let date2 = NSDate.init(timeIntervalSince1970: 1465573984000) // 6/10/2016, 11:53:04 AM
+    let mood1: Mood.MoodRating = .Happy
+    let mood2: Mood.MoodRating = .Energetic
+    
     override func setUp() {
         super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+
+        let timeSlept = TimeSlept(minutes: 480)
+        let habits: [Habit]? = [.ReadBook, .NoScreens]
+        let notes = Notes(notes: "Hello")
+        let diaryEntry = DiaryEntry(date: date1, timeSlept:timeSlept, bedtimeMood: mood1, wakeUpMood: mood2, habits: habits , notes: notes)
+        
+        diaryViewModel = DiaryViewModel(entry: diaryEntry)
+        
     }
     
     override func tearDown() {
@@ -21,16 +34,20 @@ class SleepDiaryTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testUpdateDate() {
+        XCTAssertEqual(date1, diaryViewModel?.date)
+        diaryViewModel?.updateDate(date2)
+        XCTAssertNotEqual(date1, diaryViewModel?.date)
+        XCTAssertEqual(date2,  diaryViewModel?.date)
     }
     
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measureBlock {
-            // Put the code you want to measure the time of here.
-        }
+    
+    func testUpdateMood() {
+        XCTAssertEqual(mood1, diaryViewModel?.bedMood)
+        diaryViewModel?.updateMood(mood2, moodType: .Bedtime)
+        XCTAssertNotEqual(mood1, diaryViewModel?.bedMood)
+        XCTAssertEqual(mood2,  diaryViewModel?.bedMood)
+        
     }
     
 }
