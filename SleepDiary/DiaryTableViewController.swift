@@ -75,7 +75,9 @@ class DiaryTableViewController: UITableViewController {
             cell.configure(diaryViewModel, moodType: .WakeUp)
             return cell
         case .Habits:
-            return defaultCell
+            let cell = HabitsTableViewCell.cell(tableView)
+            cell.configure(diaryViewModel)
+            return cell
         case .Meds:
             return defaultCell
         case .Notes:

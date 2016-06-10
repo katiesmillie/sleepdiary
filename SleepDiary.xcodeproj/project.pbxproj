@@ -18,8 +18,8 @@
 		2D649E9E1D09AE6B00727CE8 /* DiaryEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D649E9D1D09AE6B00727CE8 /* DiaryEntry.swift */; };
 		2D649EA21D09E34200727CE8 /* DateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D649EA11D09E34200727CE8 /* DateTableViewCell.swift */; };
 		2D649EA41D09E34F00727CE8 /* MoodTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D649EA31D09E34F00727CE8 /* MoodTableViewCell.swift */; };
-		2D649EA61D0A340000727CE8 /* HabitsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D649EA51D0A340000727CE8 /* HabitsTableViewCell.swift */; };
 		2D649EA81D0AE4FF00727CE8 /* DiaryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D649EA71D0AE4FF00727CE8 /* DiaryViewModel.swift */; };
+		2D649EAA1D0AE9DB00727CE8 /* HabitsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D649EA91D0AE9DB00727CE8 /* HabitsTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,8 +57,8 @@
 		2D649E9D1D09AE6B00727CE8 /* DiaryEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiaryEntry.swift; sourceTree = "<group>"; };
 		2D649EA11D09E34200727CE8 /* DateTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateTableViewCell.swift; sourceTree = "<group>"; };
 		2D649EA31D09E34F00727CE8 /* MoodTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoodTableViewCell.swift; sourceTree = "<group>"; };
-		2D649EA51D0A340000727CE8 /* HabitsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HabitsTableViewCell.swift; path = ../HabitsTableViewCell.swift; sourceTree = "<group>"; };
 		2D649EA71D0AE4FF00727CE8 /* DiaryViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiaryViewModel.swift; sourceTree = "<group>"; };
+		2D649EA91D0AE9DB00727CE8 /* HabitsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HabitsTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,7 +116,7 @@
 				2D649E701D09AC5900727CE8 /* Main.storyboard */,
 				2D649EA11D09E34200727CE8 /* DateTableViewCell.swift */,
 				2D649EA31D09E34F00727CE8 /* MoodTableViewCell.swift */,
-				2D649EA51D0A340000727CE8 /* HabitsTableViewCell.swift */,
+				2D649EA91D0AE9DB00727CE8 /* HabitsTableViewCell.swift */,
 				2D649E761D09AC5900727CE8 /* Assets.xcassets */,
 				2D649E781D09AC5900727CE8 /* LaunchScreen.storyboard */,
 				2D649E7B1D09AC5900727CE8 /* Info.plist */,
@@ -274,9 +274,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D649EAA1D0AE9DB00727CE8 /* HabitsTableViewCell.swift in Sources */,
 				2D649E751D09AC5900727CE8 /* SleepDiary.xcdatamodeld in Sources */,
 				2D649E6F1D09AC5900727CE8 /* DiaryTableViewController.swift in Sources */,
-				2D649EA61D0A340000727CE8 /* HabitsTableViewCell.swift in Sources */,
 				2D649E9E1D09AE6B00727CE8 /* DiaryEntry.swift in Sources */,
 				2D649EA21D09E34200727CE8 /* DateTableViewCell.swift in Sources */,
 				2D649EA81D0AE4FF00727CE8 /* DiaryViewModel.swift in Sources */,
