@@ -1,26 +1,270 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="4eF-3f-Ieu">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Navigation Controller-->
+        <scene sceneID="8IV-kc-zWT">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SleepDiary" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <navigationController id="4eF-3f-Ieu" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="g89-Gb-hb9">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="tDp-rL-kqC" kind="relationship" relationship="rootViewController" id="ntn-Qu-9sf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IXh-f6-af4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-70" y="580"/>
+        </scene>
+        <!--Sleep Diary-->
+        <scene sceneID="pdh-nX-Sl4">
+            <objects>
+                <tableViewController id="tDp-rL-kqC" customClass="DiaryTableViewController" customModule="SleepDiary" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="HRr-se-Sz9">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="DateTableViewCell" id="SPU-aj-weF" customClass="DateTableViewCell" customModule="SleepDiary" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SPU-aj-weF" id="O70-Ie-d2e">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mZi-iE-aJU">
+                                            <rect key="frame" x="259" y="11" width="82" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="mZi-iE-aJU" firstAttribute="centerX" secondItem="O70-Ie-d2e" secondAttribute="centerX" id="Ei1-Bj-iRX"/>
+                                        <constraint firstItem="mZi-iE-aJU" firstAttribute="leading" secondItem="O70-Ie-d2e" secondAttribute="leadingMargin" constant="20" id="MZ4-kd-P3K"/>
+                                        <constraint firstItem="mZi-iE-aJU" firstAttribute="centerY" secondItem="O70-Ie-d2e" secondAttribute="centerY" id="YsU-mt-ado"/>
+                                    </constraints>
+                                    <variation key="default">
+                                        <mask key="constraints">
+                                            <exclude reference="MZ4-kd-P3K"/>
+                                        </mask>
+                                    </variation>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="dateLabel" destination="mZi-iE-aJU" id="CIq-dV-CM0"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="MoodTableViewCell" rowHeight="100" id="Xbd-Ap-wAw" customClass="MoodTableViewCell" customModule="SleepDiary" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="136" width="600" height="100"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Xbd-Ap-wAw" id="od0-TO-YMV">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="99"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="3" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="E1v-i6-l0b">
+                                            <rect key="frame" x="28" y="41" width="544" height="26"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c7t-5y-k8g">
+                                                    <rect key="frame" x="0.0" y="0.0" width="106" height="26"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                                                    <state key="normal" title="Button">
+                                                        <color key="titleShadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="firstButtonTapped:" destination="Xbd-Ap-wAw" eventType="touchUpInside" id="wfH-78-gJ0"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z4q-sv-hlV">
+                                                    <rect key="frame" x="109" y="0.0" width="107" height="26"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                                                    <state key="normal" title="Button">
+                                                        <color key="titleShadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iOM-Wh-9ct">
+                                                    <rect key="frame" x="219" y="0.0" width="106" height="26"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                                                    <state key="normal" title="Button">
+                                                        <color key="titleShadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nh1-ne-8vE">
+                                                    <rect key="frame" x="328" y="0.0" width="107" height="26"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                                                    <state key="normal" title="Button">
+                                                        <color key="titleShadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f3M-ZL-72U">
+                                                    <rect key="frame" x="438" y="0.0" width="106" height="26"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                                                    <state key="normal" title="Button">
+                                                        <color key="titleShadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                </button>
+                                            </subviews>
+                                        </stackView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tTC-0a-gti">
+                                            <rect key="frame" x="32" y="12" width="540" height="17"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="E1v-i6-l0b" firstAttribute="centerY" secondItem="od0-TO-YMV" secondAttribute="centerY" id="03F-Mh-6rx"/>
+                                        <constraint firstItem="tTC-0a-gti" firstAttribute="top" secondItem="od0-TO-YMV" secondAttribute="topMargin" constant="4" id="9oW-mN-qCM"/>
+                                        <constraint firstItem="E1v-i6-l0b" firstAttribute="leading" secondItem="od0-TO-YMV" secondAttribute="leadingMargin" constant="20" id="CzN-c6-NIZ"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="E1v-i6-l0b" secondAttribute="trailing" constant="20" id="S0t-IR-8aG"/>
+                                        <constraint firstItem="E1v-i6-l0b" firstAttribute="top" secondItem="tTC-0a-gti" secondAttribute="bottom" constant="12" id="cj8-9z-ME2"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="tTC-0a-gti" secondAttribute="trailing" constant="20" id="d1b-vs-vwB"/>
+                                        <constraint firstItem="tTC-0a-gti" firstAttribute="leading" secondItem="od0-TO-YMV" secondAttribute="leadingMargin" constant="24" id="diJ-od-vOi"/>
+                                        <constraint firstAttribute="topMargin" secondItem="tTC-0a-gti" secondAttribute="top" constant="12" id="kah-q2-OnR"/>
+                                    </constraints>
+                                    <variation key="default">
+                                        <mask key="constraints">
+                                            <exclude reference="kah-q2-OnR"/>
+                                            <exclude reference="03F-Mh-6rx"/>
+                                        </mask>
+                                    </variation>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="fifthButton" destination="f3M-ZL-72U" id="QTB-rs-nDr"/>
+                                    <outlet property="firstButton" destination="c7t-5y-k8g" id="crM-c3-Bz8"/>
+                                    <outlet property="fourthButton" destination="nh1-ne-8vE" id="cbI-V2-cmy"/>
+                                    <outlet property="headerLabel" destination="tTC-0a-gti" id="ysc-vA-aSc"/>
+                                    <outlet property="secondButton" destination="Z4q-sv-hlV" id="aFI-Fq-uIP"/>
+                                    <outlet property="thirdButton" destination="iOM-Wh-9ct" id="Q7W-w2-4nL"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="HabitsTableViewCell" rowHeight="120" id="nt1-Y1-GSb" customClass="HabitsTableViewCell" customModule="SleepDiary" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="236" width="600" height="120"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nt1-Y1-GSb" id="rly-L8-GBf">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="119"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="bXV-KY-ZRo">
+                                            <rect key="frame" x="28" y="41" width="544" height="66"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="FZv-0X-VX1">
+                                                    <rect key="frame" x="0.0" y="0.0" width="544" height="26"/>
+                                                    <subviews>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mEp-TZ-Jks">
+                                                            <rect key="frame" x="0.0" y="0.0" width="181" height="26"/>
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                                                            <state key="normal" title="Button"/>
+                                                        </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FfI-m6-Ah9">
+                                                            <rect key="frame" x="181" y="0.0" width="182" height="26"/>
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                                                            <state key="normal" title="Button"/>
+                                                        </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LAG-fI-D6Z">
+                                                            <rect key="frame" x="363" y="0.0" width="181" height="26"/>
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                                                            <state key="normal" title="Button"/>
+                                                        </button>
+                                                    </subviews>
+                                                </stackView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="cX2-hz-ou7">
+                                                    <rect key="frame" x="0.0" y="40" width="544" height="26"/>
+                                                    <subviews>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BNN-zf-qD2">
+                                                            <rect key="frame" x="0.0" y="0.0" width="181" height="26"/>
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                                                            <state key="normal" title="Button"/>
+                                                        </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="whE-hs-Po9">
+                                                            <rect key="frame" x="181" y="0.0" width="182" height="26"/>
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                                                            <state key="normal" title="Button"/>
+                                                        </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RsC-yU-6II">
+                                                            <rect key="frame" x="363" y="0.0" width="181" height="26"/>
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                                                            <state key="normal" title="Button"/>
+                                                        </button>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="FZv-0X-VX1" firstAttribute="width" secondItem="bXV-KY-ZRo" secondAttribute="width" id="Fer-iN-Cip"/>
+                                                <constraint firstItem="cX2-hz-ou7" firstAttribute="width" secondItem="bXV-KY-ZRo" secondAttribute="width" id="nqF-TO-TPL"/>
+                                                <constraint firstItem="cX2-hz-ou7" firstAttribute="top" secondItem="FZv-0X-VX1" secondAttribute="bottom" constant="20" id="zXK-PT-nKp"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="zXK-PT-nKp"/>
+                                                </mask>
+                                            </variation>
+                                        </stackView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G6t-hB-N2F">
+                                            <rect key="frame" x="32" y="12" width="540" height="17"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="bXV-KY-ZRo" firstAttribute="top" secondItem="G6t-hB-N2F" secondAttribute="bottom" constant="12" id="8l6-aR-NlG"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="bXV-KY-ZRo" secondAttribute="trailing" constant="20" id="LhY-4p-9zR"/>
+                                        <constraint firstItem="bXV-KY-ZRo" firstAttribute="centerY" secondItem="rly-L8-GBf" secondAttribute="centerY" id="Vb8-1B-7Gn"/>
+                                        <constraint firstItem="bXV-KY-ZRo" firstAttribute="leading" secondItem="rly-L8-GBf" secondAttribute="leadingMargin" constant="20" id="cSu-tv-cbX"/>
+                                        <constraint firstItem="bXV-KY-ZRo" firstAttribute="centerX" secondItem="rly-L8-GBf" secondAttribute="centerX" id="oDW-SO-nIk"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="G6t-hB-N2F" secondAttribute="trailing" constant="20" id="xtP-h0-zTz"/>
+                                        <constraint firstItem="G6t-hB-N2F" firstAttribute="leading" secondItem="rly-L8-GBf" secondAttribute="leadingMargin" constant="24" id="yIW-Ns-K6l"/>
+                                        <constraint firstItem="G6t-hB-N2F" firstAttribute="top" secondItem="rly-L8-GBf" secondAttribute="topMargin" constant="4" id="yiU-T7-yMl"/>
+                                    </constraints>
+                                    <variation key="default">
+                                        <mask key="constraints">
+                                            <exclude reference="Vb8-1B-7Gn"/>
+                                        </mask>
+                                    </variation>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="fifthButton" destination="whE-hs-Po9" id="ylH-J1-cPS"/>
+                                    <outlet property="firstButton" destination="mEp-TZ-Jks" id="UlA-lh-7Dz"/>
+                                    <outlet property="fourthButton" destination="BNN-zf-qD2" id="oEL-qI-BiV"/>
+                                    <outlet property="headerLabel" destination="G6t-hB-N2F" id="1n9-Sx-dxA"/>
+                                    <outlet property="secondButton" destination="FfI-m6-Ah9" id="che-oy-5dW"/>
+                                    <outlet property="sixthButton" destination="RsC-yU-6II" id="e2c-aX-xjb"/>
+                                    <outlet property="thirdButton" destination="LAG-fI-D6Z" id="uqy-PY-gd5"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="IN3-b6-FZK">
+                                <rect key="frame" x="0.0" y="356" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IN3-b6-FZK" id="yQ4-w2-60A">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="1uc-Y2-OTN">
+                                <rect key="frame" x="0.0" y="400" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1uc-Y2-OTN" id="pGP-OI-6Er">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="tDp-rL-kqC" id="n3j-XM-8JC"/>
+                            <outlet property="delegate" destination="tDp-rL-kqC" id="pFK-7H-a9w"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Sleep Diary" id="BMU-Xo-q9A"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pKi-P7-gkU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="580" y="580"/>
         </scene>
     </scenes>
 </document>
