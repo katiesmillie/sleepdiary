@@ -20,6 +20,9 @@
 		2D649EA41D09E34F00727CE8 /* MoodTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D649EA31D09E34F00727CE8 /* MoodTableViewCell.swift */; };
 		2D649EA81D0AE4FF00727CE8 /* DiaryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D649EA71D0AE4FF00727CE8 /* DiaryViewModel.swift */; };
 		2D649EAA1D0AE9DB00727CE8 /* HabitsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D649EA91D0AE9DB00727CE8 /* HabitsTableViewCell.swift */; };
+		2D649EAC1D0AEB1900727CE8 /* DiaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D649EAB1D0AEB1900727CE8 /* DiaryButton.swift */; };
+		2D649EAE1D0AF3FF00727CE8 /* TimeSleptTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D649EAD1D0AF3FF00727CE8 /* TimeSleptTableViewCell.swift */; };
+		2D649EB01D0AF96000727CE8 /* NotesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D649EAF1D0AF96000727CE8 /* NotesTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +62,9 @@
 		2D649EA31D09E34F00727CE8 /* MoodTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoodTableViewCell.swift; sourceTree = "<group>"; };
 		2D649EA71D0AE4FF00727CE8 /* DiaryViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiaryViewModel.swift; sourceTree = "<group>"; };
 		2D649EA91D0AE9DB00727CE8 /* HabitsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HabitsTableViewCell.swift; sourceTree = "<group>"; };
+		2D649EAB1D0AEB1900727CE8 /* DiaryButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiaryButton.swift; sourceTree = "<group>"; };
+		2D649EAD1D0AF3FF00727CE8 /* TimeSleptTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeSleptTableViewCell.swift; sourceTree = "<group>"; };
+		2D649EAF1D0AF96000727CE8 /* NotesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotesTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,7 +122,10 @@
 				2D649E701D09AC5900727CE8 /* Main.storyboard */,
 				2D649EA11D09E34200727CE8 /* DateTableViewCell.swift */,
 				2D649EA31D09E34F00727CE8 /* MoodTableViewCell.swift */,
+				2D649EAD1D0AF3FF00727CE8 /* TimeSleptTableViewCell.swift */,
 				2D649EA91D0AE9DB00727CE8 /* HabitsTableViewCell.swift */,
+				2D649EAF1D0AF96000727CE8 /* NotesTableViewCell.swift */,
+				2D649EAB1D0AEB1900727CE8 /* DiaryButton.swift */,
 				2D649E761D09AC5900727CE8 /* Assets.xcassets */,
 				2D649E781D09AC5900727CE8 /* LaunchScreen.storyboard */,
 				2D649E7B1D09AC5900727CE8 /* Info.plist */,
@@ -274,14 +283,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D649EAC1D0AEB1900727CE8 /* DiaryButton.swift in Sources */,
 				2D649EAA1D0AE9DB00727CE8 /* HabitsTableViewCell.swift in Sources */,
 				2D649E751D09AC5900727CE8 /* SleepDiary.xcdatamodeld in Sources */,
 				2D649E6F1D09AC5900727CE8 /* DiaryTableViewController.swift in Sources */,
+				2D649EB01D0AF96000727CE8 /* NotesTableViewCell.swift in Sources */,
 				2D649E9E1D09AE6B00727CE8 /* DiaryEntry.swift in Sources */,
 				2D649EA21D09E34200727CE8 /* DateTableViewCell.swift in Sources */,
 				2D649EA81D0AE4FF00727CE8 /* DiaryViewModel.swift in Sources */,
 				2D649EA41D09E34F00727CE8 /* MoodTableViewCell.swift in Sources */,
 				2D649E6D1D09AC5900727CE8 /* AppDelegate.swift in Sources */,
+				2D649EAE1D0AF3FF00727CE8 /* TimeSleptTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
