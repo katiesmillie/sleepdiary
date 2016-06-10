@@ -13,13 +13,13 @@ public struct DiaryEntry {
     let timeSlept: TimeSlept?
     let bedtimeMood: Mood.MoodRating?
     let wakeUpMood: Mood.MoodRating?
-    let habits: Habit?
-    let meds: Medication?
+    let habits: [Habit]?
+    let meds: [Medication]?
     let notes: Notes?
     
     let date: NSDate?
     
-    public init(date: NSDate? = nil, timeSlept: TimeSlept? = nil , bedtimeMood: Mood.MoodRating? = nil, wakeUpMood: Mood.MoodRating? = nil, habits: Habit? = nil, meds: Medication? = nil, notes: Notes? = nil) {
+    public init(date: NSDate? = nil, timeSlept: TimeSlept? = nil , bedtimeMood: Mood.MoodRating? = nil, wakeUpMood: Mood.MoodRating? = nil, habits: [Habit]? = nil, meds: [Medication]? = nil, notes: Notes? = nil) {
         self.date = date
         self.timeSlept = timeSlept
         self.bedtimeMood = bedtimeMood
@@ -29,7 +29,7 @@ public struct DiaryEntry {
         self.notes = notes
     }
     
-    public init(original: DiaryEntry, date: NSDate? = nil, timeSlept: TimeSlept? = nil , bedtimeMood: Mood.MoodRating? = nil, wakeUpMood: Mood.MoodRating? = nil, habits: Habit? = nil, meds: Medication? = nil, notes: Notes? = nil) {
+    public init(original: DiaryEntry, date: NSDate? = nil, timeSlept: TimeSlept? = nil , bedtimeMood: Mood.MoodRating? = nil, wakeUpMood: Mood.MoodRating? = nil, habits: [Habit]? = nil, meds: [Medication]? = nil, notes: Notes? = nil) {
         self.date = date ?? original.date
         self.timeSlept = timeSlept ?? original.timeSlept
         self.bedtimeMood = bedtimeMood ?? original.bedtimeMood
