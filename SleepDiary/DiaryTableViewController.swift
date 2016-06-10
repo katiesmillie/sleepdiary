@@ -83,13 +83,20 @@ class DiaryTableViewController: UITableViewController {
         case .Meds:
             return defaultCell
         case .Notes:
-            return defaultCell
+            let cell = NotesTableViewCell.cell(tableView)
+            cell.configure(diaryViewModel)
+            cell.notesInputField?.delegate = self
+            return cell
         }
-        
-    }
-    
 
-    
+    }
+}
+
+extension DiaryTableViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
 
     
 }
