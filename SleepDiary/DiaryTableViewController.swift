@@ -65,7 +65,9 @@ class DiaryTableViewController: UITableViewController {
             cell.configure(diaryViewModel)
             return cell
         case .TimeSlept:
-            return defaultCell
+            let cell = TimeSleptTableViewCell.cell(tableView)
+            cell.configure(diaryViewModel)
+            return cell
         case .BedMood:
             let cell = MoodTableViewCell.cell(tableView)
             cell.configure(diaryViewModel, moodType: .Bedtime)
