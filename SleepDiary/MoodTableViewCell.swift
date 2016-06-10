@@ -68,15 +68,49 @@ class MoodTableViewCell: UITableViewCell, Moods {
     }
     
     
-    @IBAction func firstButtonTapped(sender: UIButton) {
-        let mood: Mood.MoodRating = .Anxious
+
+    @IBAction func buttonWasTapped(sender: DiaryButton) {
+        let buttons = [firstButton, secondButton, thirdButton, fourthButton, fifthButton]
+        let filteredButtons = buttons.filter { $0?.titleLabel?.text == sender.titleLabel?.text }
+        guard let buttonTapped = filteredButtons.first else { return }
+        
         guard let moodType = moodType else { return }
-        diaryViewModel?.updateMood(mood, moodType: moodType)
+        
+        for mood in moods {
+            switch mood {
+            case .Anxious:
+                if buttonTapped?.titleLabel?.text == mood.string() {
+                    let mood: Mood.MoodRating = .Anxious
+                    diaryViewModel?.updateMood(mood, moodType: moodType)
+                }
+            case .Cranky:
+                if buttonTapped?.titleLabel?.text == mood.string() {
+                    let mood: Mood.MoodRating = .Cranky
+                    diaryViewModel?.updateMood(mood, moodType: moodType)
+                }
+            case .Relaxed:
+                if buttonTapped?.titleLabel?.text == mood.string() {
+                    let mood: Mood.MoodRating = .Relaxed
+                    diaryViewModel?.updateMood(mood, moodType: moodType)
+                }
+            case .Happy:
+                if buttonTapped?.titleLabel?.text == mood.string() {
+                    let mood: Mood.MoodRating = .Happy
+                    diaryViewModel?.updateMood(mood, moodType: moodType)
+                }
+            case .Energetic:
+                if buttonTapped?.titleLabel?.text == mood.string() {
+                    let mood: Mood.MoodRating = .Energetic
+                    diaryViewModel?.updateMood(mood, moodType: moodType)
+                }
+            }
+        }
+        
     }
     
+    
+}
 
  
     
-    
 
-}
