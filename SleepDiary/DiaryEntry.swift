@@ -11,15 +11,15 @@ import Foundation
 
 public struct DiaryEntry {
     let timeSlept: TimeSlept?
-    let bedtimeMood: Mood?
-    let wakeUpMood: Mood?
+    let bedtimeMood: Mood.MoodRating?
+    let wakeUpMood: Mood.MoodRating?
     let habits: Habit?
     let meds: Medication?
     let notes: Notes?
     
     let date: NSDate?
     
-    public init(date: NSDate? = nil, timeSlept: TimeSlept? = nil , bedtimeMood: Mood? = nil, wakeUpMood: Mood? = nil, habits: Habit? = nil, meds: Medication? = nil, notes: Notes? = nil) {
+    public init(date: NSDate? = nil, timeSlept: TimeSlept? = nil , bedtimeMood: Mood.MoodRating? = nil, wakeUpMood: Mood.MoodRating? = nil, habits: Habit? = nil, meds: Medication? = nil, notes: Notes? = nil) {
         self.date = date
         self.timeSlept = timeSlept
         self.bedtimeMood = bedtimeMood
@@ -29,7 +29,7 @@ public struct DiaryEntry {
         self.notes = notes
     }
     
-    public init(original: DiaryEntry, date: NSDate? = nil, timeSlept: TimeSlept? = nil , bedtimeMood: Mood? = nil, wakeUpMood: Mood? = nil, habits: Habit? = nil, meds: Medication? = nil, notes: Notes? = nil) {
+    public init(original: DiaryEntry, date: NSDate? = nil, timeSlept: TimeSlept? = nil , bedtimeMood: Mood.MoodRating? = nil, wakeUpMood: Mood.MoodRating? = nil, habits: Habit? = nil, meds: Medication? = nil, notes: Notes? = nil) {
         self.date = date ?? original.date
         self.timeSlept = timeSlept ?? original.timeSlept
         self.bedtimeMood = bedtimeMood ?? original.bedtimeMood
@@ -61,20 +61,22 @@ public struct TimeSlept {
 }
 
 public enum Mood {
-    case Anxious
-    case Cranky
-    case Relaxed
-    case Happy
-    case Energetic
     
-    
-    public func string() -> String {
-        switch self {
-        case Anxious: return "Anxious"
-        case Cranky: return "Cranky"
-        case Relaxed: return "Relaxed"
-        case Happy: return "Happy"
-        case Energetic: return "Energetic"
+    public enum MoodRating {
+        case Anxious
+        case Cranky
+        case Relaxed
+        case Happy
+        case Energetic
+        
+        public func string() -> String {
+            switch self {
+            case Anxious: return "Anxious"
+            case Cranky: return "Cranky"
+            case Relaxed: return "Relaxed"
+            case Happy: return "Happy"
+            case Energetic: return "Energetic"
+            }
         }
     }
     
@@ -82,10 +84,11 @@ public enum Mood {
         case Bedtime
         case WakeUp
     }
-
+    
 }
 
 public enum Habit {
+
     case DrankTea
     case BathOrShower
     case ReadBook
@@ -103,6 +106,7 @@ public enum Habit {
         case NoScreens: return "No Screens"
         }
     }
+
 }
 
 public enum Medication {
