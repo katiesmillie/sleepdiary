@@ -14,13 +14,12 @@ private enum DiaryRow {
     case BedMood
     case WakeMood
     case Habits
-    case Meds
     case Notes
 }
 
 class DiaryTableViewController: UITableViewController {
     
-    private var rows: [DiaryRow] = [.Date, .TimeSlept, .BedMood, .WakeMood, .Habits, .Meds, .Notes]
+    private var rows: [DiaryRow] = [.Date, .TimeSlept, .BedMood, .WakeMood, .Habits, .Notes]
     private var diaryViewModel : DiaryViewModel?
     
     override func viewDidLoad() {
@@ -48,7 +47,7 @@ class DiaryTableViewController: UITableViewController {
             return 40
         case .TimeSlept, .BedMood, .WakeMood:
             return 80
-        case .Habits, .Meds:
+        case .Habits:
             return 120
         case .Notes:
             return 100
@@ -80,8 +79,6 @@ class DiaryTableViewController: UITableViewController {
             let cell = HabitsTableViewCell.cell(tableView)
             cell.configure(diaryViewModel)
             return cell
-        case .Meds:
-            return defaultCell
         case .Notes:
             let cell = NotesTableViewCell.cell(tableView)
             cell.configure(diaryViewModel)
@@ -100,4 +97,7 @@ extension DiaryTableViewController: UITextFieldDelegate {
 
     
 }
+
+
+
 
