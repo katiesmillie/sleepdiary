@@ -24,6 +24,7 @@ class DiaryTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tableView.keyboardDismissMode = .Interactive
         setViewModel()
     }
     
