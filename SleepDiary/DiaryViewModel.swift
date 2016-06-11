@@ -36,10 +36,6 @@ public class DiaryViewModel {
         return diaryEntry.habits ?? nil
     }
     
-    public var meds: [Medication]? {
-        return diaryEntry.meds ?? nil
-    }
-    
     public var notes: Notes? {
         return diaryEntry.notes ?? nil
     }
