@@ -64,7 +64,7 @@ class DiaryTableViewController: UITableViewController {
             return cell
         case .TimeSlept:
             let cell = TimeSleptTableViewCell.cell(tableView)
-            cell.configure(diaryViewModel)
+            cell.configure(diaryViewModel, delegate: self)
             return cell
         case .BedMood:
             let cell = MoodTableViewCell.cell(tableView)
@@ -86,6 +86,27 @@ class DiaryTableViewController: UITableViewController {
         }
 
     }
+    
+}
+
+
+extension DiaryTableViewController: TimeSleptAlert {
+
+    func minutesAlert() {
+        showAlert("Please enter minutes between 0 and 59")
+    }
+    
+    func hoursAlert() {
+        showAlert("Please enter hours between 0 and 20")
+    }
+    
+    func showAlert(message: String) {
+        let alert = UIAlertController(title: nil, message: message,  preferredStyle: .Alert)
+        let action = UIAlertAction(title: "OK", style: .Default, handler: nil)
+        alert.addAction(action)
+        self.presentViewController(alert, animated: true, completion: nil)
+    }
+    
 }
 
 extension DiaryTableViewController: UITextFieldDelegate {

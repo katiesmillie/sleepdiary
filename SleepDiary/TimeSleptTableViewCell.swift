@@ -8,6 +8,11 @@
 
 import UIKit
 
+protocol TimeSleptAlert {
+    func minutesAlert()
+    func hoursAlert()
+}
+
 class TimeSleptTableViewCell: UITableViewCell {
     
     @IBOutlet weak var hoursLabel: UILabel?
@@ -16,65 +21,77 @@ class TimeSleptTableViewCell: UITableViewCell {
     
     @IBOutlet weak var hoursInput: UITextField?
     @IBOutlet weak var minutesInput: UITextField?
-
+    
     var diaryViewModel: DiaryViewModel?
+    var delegate: DiaryTableViewController?
     
     class func cell(tableView: UITableView) -> TimeSleptTableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("TimeSleptTableViewCell") as! TimeSleptTableViewCell
         return cell
     }
     
-    func configure(diaryViewModel: DiaryViewModel) {
+    func configure(diaryViewModel: DiaryViewModel, delegate: DiaryTableViewController) {
         self.diaryViewModel = diaryViewModel
+        self.delegate = delegate
         headerLabel?.text = "Time Slept"
         minutesLabel?.text = "Minutes"
         hoursLabel?.text = "Hours"
+        createAccessoryView()
+    }
+    
+    func createAccessoryView() {
+        let accessoryView = UIView(frame: CGRectMake(0, 0, 10, 40))
+        accessoryView.layer.borderColor = UIColor.grayColor().CGColor
+        accessoryView.backgroundColor = UIColor.whiteColor()
+        let doneLabel = UILabel(frame: accessoryView.frame)
+        doneLabel.text = "Done ✅"
+        doneLabel.textColor = UIColor.blueColor()
+        doneLabel.textAlignment = NSTextAlignment.Center
+        accessoryView.addSubview(doneLabel)
         
+        let doneButton = UIButton(frame: accessoryView.frame)
+        doneButton.addTarget(self, action: #selector(validateAndDismissKeyboard), forControlEvents: UIControlEvents.TouchUpInside)
+        accessoryView.addSubview(doneButton)
+        
+        accessoryView.autoresizingMask = UIViewAutoresizing.FlexibleWidth
+        doneLabel.autoresizingMask = UIViewAutoresizing.FlexibleWidth
+        doneButton.autoresizingMask = UIViewAutoresizing.FlexibleWidth
+        
+        hoursInput?.inputAccessoryView = accessoryView
+        minutesInput?.inputAccessoryView = accessoryView
+    }
+    
+    func validateAndDismissKeyboard() {
+        if !validateHours() {
+            delegate?.hoursAlert()
+        } else if !validateMinutes() {
+            delegate?.minutesAlert()
+        } else if validateHours() && validateMinutes() {
+            diaryViewModel?.updateTimeSlept(hoursAsInt(), minutes: minutesAsInt())
+            hoursInput?.resignFirstResponder()
+            minutesInput?.resignFirstResponder()
+        }
     }
 
-    func validateMinutes() -> Bool {
-        guard let inputtedMinutes = minutesInput?.text else { return false }
-        guard let formattedMinutes = NSNumberFormatter().numberFromString(inputtedMinutes) else { return false }
-        let minutes = Int(formattedMinutes)
-        
-        if minutes < 60 || minutes >= 0 {
-           return true
-        } else {
-            return false
-        }
-
+    func hoursAsInt() -> Int {
+        // If hours field is nil or empty string, set to 0
+        guard let hoursString = hoursInput?.text else { return 0 }
+        return Int(hoursString) ?? 0
+    }
+    
+    func minutesAsInt() -> Int {
+        // If minutes field is nil or empty string, set to 0
+        guard let minutesString = minutesInput?.text else { return 0 }
+        return Int(minutesString) ?? 0
     }
     
     func validateHours() -> Bool {
-        guard let inputtedHours = hoursInput?.text else { return false }
-        guard let formattedHours = NSNumberFormatter().numberFromString(inputtedHours) else { return false }
-        let hours = Int(formattedHours)
-        
-        if hours <= 20 || hours >= 0 {
-            return true
-        } else {
-            return false
-        }
+        return hoursAsInt() <= 20 && hoursAsInt() >= 0
     }
     
-    func minutesAlert() {
-        let message = "Please enter minutes between 0 and 59"
-        let alert = UIAlertController(title: nil, message: message,  preferredStyle: .Alert)
-        let action = UIAlertAction(title: "OK", style: .Default, handler: {
-            action in
-        })
-        alert.addAction(action)
-    }
-    
-    func hoursAlert() {
-        let message = "Please enter hours between 0 and 20"
-        let alert = UIAlertController(title: nil, message: message,  preferredStyle: .Alert)
-        let action = UIAlertAction(title: "OK", style: .Default, handler: {
-            action in
-        })
-        alert.addAction(action)
+    func validateMinutes() -> Bool {
+        return minutesAsInt() < 60 && minutesAsInt() >= 0
     }
     
     
-
 }
