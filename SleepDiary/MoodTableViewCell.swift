@@ -12,6 +12,10 @@ protocol Moods {
     var moods: [Mood.MoodRating] { get }
 }
 
+
+// Playing with protocol extensions, however default value could just as easily
+// be set in the cell as it's not used outside of that scope (so far)
+
 extension Moods {
     var moods: [Mood.MoodRating] {
         return [.Anxious, .Cranky, .Relaxed, .Happy, .Energetic]
@@ -30,9 +34,7 @@ class MoodTableViewCell: UITableViewCell, Moods {
     
     var diaryViewModel: DiaryViewModel?
     var moodType: Mood.MoodType?
-    
-
-    
+        
     class func cell(tableView: UITableView) -> MoodTableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("MoodTableViewCell") as! MoodTableViewCell
         return cell
@@ -42,7 +44,6 @@ class MoodTableViewCell: UITableViewCell, Moods {
         self.diaryViewModel = diaryViewModel
         self.moodType = moodType
         
-        
         switch moodType {
         case .Bedtime:
             headerLabel?.text = "Bedtime Mood"
@@ -50,7 +51,7 @@ class MoodTableViewCell: UITableViewCell, Moods {
             headerLabel?.text = "Wake-Up Mood"
 
         }
-       
+        
         for mood in moods {
             switch mood {
             case .Anxious:
@@ -67,8 +68,6 @@ class MoodTableViewCell: UITableViewCell, Moods {
         }
     }
     
-    
-
     @IBAction func buttonWasTapped(sender: DiaryButton) {
         let buttons = [firstButton, secondButton, thirdButton, fourthButton, fifthButton]
         let filteredButtons = buttons.filter { $0?.titleLabel?.text == sender.titleLabel?.text }

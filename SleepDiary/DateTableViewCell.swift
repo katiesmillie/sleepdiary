@@ -22,7 +22,7 @@ class DateTableViewCell: UITableViewCell {
         let formatter = NSDateFormatter()
         formatter.dateStyle = .MediumStyle
         let dateString = formatter.stringFromDate(NSDate())
-        dateLabel?.text = dateString
+        dateLabel?.text = "🗓 \(dateString)"
     }
 
 }

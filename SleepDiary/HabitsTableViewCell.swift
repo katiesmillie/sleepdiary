@@ -25,7 +25,7 @@ class HabitsTableViewCell: UITableViewCell, Habits {
     var diaryViewModel: DiaryViewModel?
     
     var habits: [Habit] {
-        return [.DrankTea, .BathOrShower, .ReadBook, .Magnesium, .Massage, .NoScreens]
+        return [.DrankTea, .BathOrShower, .ReadBook, .Supplements, .Massage, .NoScreens]
     }
     
     class func cell(tableView: UITableView) -> HabitsTableViewCell {
@@ -35,8 +35,10 @@ class HabitsTableViewCell: UITableViewCell, Habits {
 
     func configure(diaryViewModel: DiaryViewModel) {
         self.diaryViewModel = diaryViewModel
-        headerLabel?.text = "Habits"
+        headerLabel?.text = "Bedtime Habits"
         
+        
+        // ???: Create a tighter coupling between buttons and moods
         for habit in habits {
             switch habit {
             case .DrankTea:
@@ -45,7 +47,7 @@ class HabitsTableViewCell: UITableViewCell, Habits {
                 secondButton?.setTitle(habit.string(), forState: UIControlState.Normal)
             case .ReadBook:
                 thirdButton?.setTitle(habit.string(), forState: UIControlState.Normal)
-            case .Magnesium:
+            case .Supplements:
                 fourthButton?.setTitle(habit.string(), forState: UIControlState.Normal)
             case .Massage:
                 fifthButton?.setTitle(habit.string(), forState: UIControlState.Normal)

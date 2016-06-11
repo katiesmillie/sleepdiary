@@ -152,8 +152,8 @@
 			isa = PBXGroup;
 			children = (
 				2D649EA11D09E34200727CE8 /* DateTableViewCell.swift */,
-				2D649EA31D09E34F00727CE8 /* MoodTableViewCell.swift */,
 				2D649EAD1D0AF3FF00727CE8 /* TimeSleptTableViewCell.swift */,
+				2D649EA31D09E34F00727CE8 /* MoodTableViewCell.swift */,
 				2D649EA91D0AE9DB00727CE8 /* HabitsTableViewCell.swift */,
 				2D649EAF1D0AF96000727CE8 /* NotesTableViewCell.swift */,
 			);

@@ -24,14 +24,13 @@ class DiaryTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setup()
+        setViewModel()
     }
     
-    func setup() {
+    func setViewModel() {
         let diaryEntry = DiaryEntry(date: NSDate())
         diaryViewModel = DiaryViewModel(entry: diaryEntry)
     }
-    
     
     private func fetchRow(indexPath: NSIndexPath) -> DiaryRow {
         return rows[indexPath.row]
@@ -44,9 +43,9 @@ class DiaryTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         switch fetchRow(indexPath) {
         case .Date:
-            return 40
+            return 60
         case .TimeSlept, .BedMood, .WakeMood:
-            return 80
+            return 90
         case .Habits:
             return 120
         case .Notes:
