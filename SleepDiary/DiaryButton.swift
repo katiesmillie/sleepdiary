@@ -16,9 +16,8 @@ class DiaryButton: UIButton {
     }
     
     func buttonTapped() {
-        self.selected = !self.selected
+        selected = !selected
+        setTitleColor(UIColor.blackColor(), forState: .Selected)
     }
-    
-
     
 }

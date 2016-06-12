@@ -24,11 +24,11 @@ extension Moods {
 
 class MoodTableViewCell: UITableViewCell, Moods {
     
-    @IBOutlet weak var firstButton: UIButton?
-    @IBOutlet weak var secondButton: UIButton?
-    @IBOutlet weak var thirdButton: UIButton?
-    @IBOutlet weak var fourthButton: UIButton?
-    @IBOutlet weak var fifthButton: UIButton?
+    @IBOutlet weak var firstButton: DiaryButton?
+    @IBOutlet weak var secondButton: DiaryButton?
+    @IBOutlet weak var thirdButton: DiaryButton?
+    @IBOutlet weak var fourthButton: DiaryButton?
+    @IBOutlet weak var fifthButton: DiaryButton?
     
     @IBOutlet weak var headerLabel: UILabel?
     
