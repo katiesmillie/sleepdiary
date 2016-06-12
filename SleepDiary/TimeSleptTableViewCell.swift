@@ -42,10 +42,10 @@ class TimeSleptTableViewCell: UITableViewCell {
     func createAccessoryView() {
         let accessoryView = UIView(frame: CGRectMake(0, 0, 10, 40))
         accessoryView.layer.borderColor = UIColor.grayColor().CGColor
-        accessoryView.backgroundColor = UIColor.whiteColor()
+        accessoryView.backgroundColor = UIColor.darkGrayColor()
         let doneLabel = UILabel(frame: accessoryView.frame)
         doneLabel.text = "Done ✅"
-        doneLabel.textColor = UIColor.blueColor()
+        doneLabel.textColor = UIColor.whiteColor()
         doneLabel.textAlignment = NSTextAlignment.Center
         accessoryView.addSubview(doneLabel)
         

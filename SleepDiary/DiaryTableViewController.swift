@@ -45,12 +45,8 @@ class DiaryTableViewController: UITableViewController {
         switch fetchRow(indexPath) {
         case .Date:
             return 60
-        case .TimeSlept, .BedMood, .WakeMood:
+        case .TimeSlept, .BedMood, .WakeMood, .Habits, .Notes:
             return 90
-        case .Habits:
-            return 120
-        case .Notes:
-            return 100
         }
     }
     

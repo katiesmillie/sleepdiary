@@ -17,10 +17,9 @@ class DateTableViewCell: UITableViewCell {
         return cell
     }
     
-    
     func configure(delegate: DiaryViewModel) {
         let formatter = NSDateFormatter()
-        formatter.dateStyle = .MediumStyle
+        formatter.dateStyle = .LongStyle
         let dateString = formatter.stringFromDate(NSDate())
         dateLabel?.text = "🗓 \(dateString)"
     }
