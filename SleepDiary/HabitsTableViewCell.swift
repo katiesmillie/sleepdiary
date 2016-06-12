@@ -45,14 +45,56 @@ class HabitsTableViewCell: UITableViewCell, Habits {
                 secondButton?.setTitle(habit.string(), forState: UIControlState.Normal)
             case .ReadBook:
                 thirdButton?.setTitle(habit.string(), forState: UIControlState.Normal)
-            case .Supplements:
-                fourthButton?.setTitle(habit.string(), forState: UIControlState.Normal)
             case .Massage:
-                fifthButton?.setTitle(habit.string(), forState: UIControlState.Normal)
+                fourthButton?.setTitle(habit.string(), forState: UIControlState.Normal)
             case .NoScreens:
-                sixthButton?.setTitle(habit.string(), forState: UIControlState.Normal)
+                fifthButton?.setTitle(habit.string(), forState: UIControlState.Normal)
             }
         }
     }
-
+    
+    @IBAction func buttonWasTapped(sender: DiaryButton) {
+        // Every time a button is tapped, find all buttons that are selected
+        // Get the Habit, then update the view model
+        let buttons: [DiaryButton?] = [firstButton, secondButton, thirdButton, fourthButton, fifthButton]
+        
+        var selectedHabits: [Habit] = []
+        for button in buttons {
+            guard let button = button else { return }
+            if button.selected {
+                guard let habit = getHabitFromButton(button) else { return }
+                selectedHabits += [habit]
+            }
+        }
+        diaryViewModel?.updateHabits(selectedHabits)
+    }
+    
+    func getHabitFromButton(button: DiaryButton) -> Habit? {
+        for habit in habits {
+            switch habit {
+            case .DrankTea:
+                if button.titleLabel?.text == habit.string() {
+                    return .DrankTea
+                }
+            case .BathOrShower:
+                if button.titleLabel?.text == habit.string() {
+                    return .BathOrShower
+                }
+            case .ReadBook:
+                if button.titleLabel?.text == habit.string() {
+                    return .ReadBook
+                }
+            case .Massage:
+                if button.titleLabel?.text == habit.string() {
+                    return .Massage
+                }
+            case .NoScreens:
+                if button.titleLabel?.text == habit.string() {
+                    return .NoScreens
+                }
+            }
+        }
+        return nil
+    }
+    
 }

@@ -91,7 +91,6 @@ public enum Habit {
     case DrankTea
     case BathOrShower
     case ReadBook
-    case Supplements
     case Massage
     case NoScreens
     
@@ -100,7 +99,6 @@ public enum Habit {
         case DrankTea: return "🍵"
         case BathOrShower: return "🛁"
         case ReadBook: return "📚"
-        case Supplements: return "💊"
         case Massage: return "🎾"
         case NoScreens: return "🚫📱"
         }
