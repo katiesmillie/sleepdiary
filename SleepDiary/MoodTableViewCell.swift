@@ -73,6 +73,15 @@ class MoodTableViewCell: UITableViewCell, Moods {
         let filteredButtons = buttons.filter { $0?.titleLabel?.text == sender.titleLabel?.text }
         guard let buttonTapped = filteredButtons.first else { return }
         
+        
+        // If another button is selected, unselect it 
+        // Since only one mood will be saved
+        for button in buttons {
+            if button != buttonTapped {
+                button?.selected = false
+            }
+        }
+        
         guard let moodType = moodType else { return }
         
         for mood in moods {
