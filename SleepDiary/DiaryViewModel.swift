@@ -36,7 +36,7 @@ public class DiaryViewModel {
         return diaryEntry.habits ?? nil
     }
     
-    public var notes: Notes? {
+    public var notes: String? {
         return diaryEntry.notes ?? nil
     }
     
