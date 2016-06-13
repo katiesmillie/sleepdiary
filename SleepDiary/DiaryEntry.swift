@@ -38,21 +38,21 @@ public struct DiaryEntry {
 }
 
 
+public let minutesInHour = 60
 
 public struct TimeSlept {
-    let minutes: Int
+    let totalMinutes: Int
     
-    init(minutes: Int) {
-        self.minutes = minutes
+    init(totalMinutes: Int) {
+        self.totalMinutes = totalMinutes
     }
     
-    let minutesInHour = 60
     var hours: Int {
-        return minutes / minutesInHour
+        return totalMinutes / minutesInHour
     }
     
     var minutesRemaning: Int {
-        return minutes % minutesInHour
+        return totalMinutes % minutesInHour
     }
     
 }
