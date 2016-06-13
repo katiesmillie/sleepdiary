@@ -23,9 +23,13 @@ public class DiaryEntriesViewModel {
     }
     
     private func decodeEntry(entry: Entry) -> DiaryEntry {
+        
+        // Feels like there is a cleaner way to do this
+        // Don't love all the vars and ifs
         var timeSlept: TimeSlept?
         var bedtimeMood: Mood.MoodRating?
         var wakeUpMood: Mood.MoodRating?
+        var habits: [Habit]?
  
         let date = entry.date
         if let time = entry.timeSlept {
@@ -38,10 +42,14 @@ public class DiaryEntriesViewModel {
         if let wakeUpRaw = entry.wakeUpMood as? Int {
             wakeUpMood = Mood.MoodRating(rawValue: wakeUpRaw)
         }
-
+        
+        if let habitsAsInt = entry.habits as? [Int] {
+            habits = habitsAsInt.flatMap{ Habit(rawValue: $0) }
+        }
         let notes = entry.notes
         
-        return DiaryEntry(date: date, timeSlept: timeSlept, bedtimeMood: bedtimeMood, wakeUpMood: wakeUpMood, habits: nil, notes: notes)
+        return DiaryEntry(date: date, timeSlept: timeSlept, bedtimeMood: bedtimeMood, wakeUpMood: wakeUpMood, habits: habits, notes: notes)
     }
     
+
 }
