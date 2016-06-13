@@ -20,9 +20,9 @@ class SleepDiaryTests: XCTestCase {
     override func setUp() {
         super.setUp()
 
-        let timeSlept = TimeSlept(minutes: 480)
+        let timeSlept = TimeSlept(totalMinutes: 480)
         let habits: [Habit]? = [.ReadBook, .NoScreens]
-        let notes = Notes(notes: "Hello")
+        let notes = "Hello"
         let diaryEntry = DiaryEntry(date: date1, timeSlept:timeSlept, bedtimeMood: mood1, wakeUpMood: mood2, habits: habits , notes: notes)
         
         diaryViewModel = DiaryViewModel(entry: diaryEntry)
@@ -39,10 +39,10 @@ class SleepDiaryTests: XCTestCase {
     
     
     func testUpdateMood() {
-        XCTAssertEqual(mood1, diaryViewModel?.bedMood)
+        XCTAssertEqual(mood1, diaryViewModel?.bedtimeMood)
         diaryViewModel?.updateMood(mood2, moodType: .Bedtime)
-        XCTAssertNotEqual(mood1, diaryViewModel?.bedMood)
-        XCTAssertEqual(mood2,  diaryViewModel?.bedMood)
+        XCTAssertNotEqual(mood1, diaryViewModel?.bedtimeMood)
+        XCTAssertEqual(mood2,  diaryViewModel?.bedtimeMood)
         
     }
     

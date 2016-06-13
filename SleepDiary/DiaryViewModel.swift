@@ -24,11 +24,11 @@ public class DiaryViewModel {
         return diaryEntry.timeSlept ?? nil
     }
     
-    public var bedMood: Mood.MoodRating? {
+    public var bedtimeMood: Mood.MoodRating? {
         return diaryEntry.bedtimeMood ?? nil
     }
     
-    public var wakeMood: Mood.MoodRating? {
+    public var wakeUpMood: Mood.MoodRating? {
         return diaryEntry.wakeUpMood ?? nil
     }
     
