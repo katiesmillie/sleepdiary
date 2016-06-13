@@ -62,6 +62,7 @@ public enum Mood {
     // Experimenting with nested Enums
     // I like associating MoodType and MoodRating, but it doesn't totally seem necessary here
     public enum MoodRating {
+    public enum MoodRating: Int {
         case Anxious
         case Cranky
         case Relaxed
@@ -86,8 +87,7 @@ public enum Mood {
     
 }
 
-public enum Habit {
-
+public enum Habit: Int {
     case DrankTea
     case BathOrShower
     case ReadBook
