@@ -45,6 +45,14 @@ public class DiaryViewModel {
         diaryEntry = newDiary
     }
     
+    public func updateTimeSlept(hours: Int, minutes: Int) {
+        let minutesFromHours = hours * minutesInHour
+        let totalMinutes = minutesFromHours + minutes
+        let time = TimeSlept(totalMinutes: totalMinutes)
+        let newDiary = DiaryEntry(original: diaryEntry, timeSlept: time)
+        diaryEntry = newDiary
+    }
+    
     public func updateMood(mood: Mood.MoodRating, moodType: Mood.MoodType) {
         var newDiary: DiaryEntry
         switch moodType {
@@ -55,5 +63,20 @@ public class DiaryViewModel {
         }
         diaryEntry = newDiary
     }
+    
+    //TODO: Habits are not saving
+    public func updateHabits(habits: [Habit]) {
+        let newDiary = DiaryEntry(original: diaryEntry, habits: habits)
+        diaryEntry = newDiary
+    }
+    
+    public func updateNotes(notes: String) {
+        let newDiary = DiaryEntry(original: diaryEntry, notes: notes)
+        diaryEntry = newDiary
+    }
+    
+
+
+
 }
 
