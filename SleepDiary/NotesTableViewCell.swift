@@ -19,12 +19,15 @@ class NotesTableViewCell: UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("NotesTableViewCell") as! NotesTableViewCell
         return cell
     }
+    
+    
     func configure(diaryViewModel: DiaryViewModel) {
         self.diaryViewModel = diaryViewModel
         headerLabel?.text = "Notes"
-        
     }
 
+    
+    // TODO: Save notes when done editing probably in UITextFieldDelegate
     
 }
 

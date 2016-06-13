@@ -17,11 +17,17 @@ class DateTableViewCell: UITableViewCell {
         return cell
     }
     
-    func configure(delegate: DiaryViewModel) {
+    func configure(diaryViewModel: DiaryViewModel) {
+        
         let formatter = NSDateFormatter()
         formatter.dateStyle = .LongStyle
-        let dateString = formatter.stringFromDate(NSDate())
+        
+        // Date should always be set, but if not use today's date
+        let date = diaryViewModel.date ?? NSDate()
+        let dateString = formatter.stringFromDate(date)
         dateLabel?.text = "🗓 \(dateString)"
     }
+    
+      // TODO: Add Date Picker
 
 }

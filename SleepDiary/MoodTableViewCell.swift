@@ -44,12 +44,25 @@ class MoodTableViewCell: UITableViewCell, Moods {
         self.diaryViewModel = diaryViewModel
         self.moodType = moodType
         
+        var setMood: Mood.MoodRating
+        
         switch moodType {
         case .Bedtime:
             headerLabel?.text = "Bedtime Mood"
+            guard let mood = diaryViewModel.bedtimeMood else { return }
+            setMood = mood
         case .WakeUp:
             headerLabel?.text = "Wake-Up Mood"
-
+            guard let mood = diaryViewModel.wakeUpMood else { return }
+            setMood = mood
+        }
+   
+        switch setMood {
+        case .Anxious: firstButton?.selected = true
+        case .Cranky: secondButton?.selected = true
+        case .Relaxed: thirdButton?.selected = true
+        case .Happy: fourthButton?.selected = true
+        case .Energetic: fifthButton?.selected = true
         }
         
         for mood in moods {
@@ -66,6 +79,8 @@ class MoodTableViewCell: UITableViewCell, Moods {
                 fifthButton?.setTitle(mood.string(), forState: UIControlState.Normal)
             }
         }
+
+        
     }
     
     @IBAction func buttonWasTapped(sender: DiaryButton) {

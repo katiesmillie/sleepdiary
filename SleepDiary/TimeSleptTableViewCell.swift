@@ -37,6 +37,13 @@ class TimeSleptTableViewCell: UITableViewCell {
         minutesLabel?.text = "Minutes"
         hoursLabel?.text = "Hours"
         createAccessoryView()
+        
+        guard let hours = diaryViewModel.timeSlept?.hours else { return }
+        guard let minutes = diaryViewModel.timeSlept?.minutesRemaning else { return }
+        
+        hoursInput?.text = String(hours)
+        minutesInput?.text = String(minutes)
+        
     }
     
     func createAccessoryView() {
