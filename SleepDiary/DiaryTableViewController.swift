@@ -7,6 +7,11 @@
 //
 
 import UIKit
+import CoreData
+
+protocol DiaryTableViewDelegate {
+    func saveEntry(diaryViewModel: DiaryViewModel)
+}
 
 private enum DiaryRow {
     case Date
@@ -20,17 +25,12 @@ private enum DiaryRow {
 class DiaryTableViewController: UITableViewController {
     
     private var rows: [DiaryRow] = [.Date, .TimeSlept, .BedMood, .WakeMood, .Habits, .Notes]
-    private var diaryViewModel : DiaryViewModel?
+    internal var diaryViewModel : DiaryViewModel?
+    var delegate: DiaryTableViewDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.keyboardDismissMode = .Interactive
-        setViewModel()
-    }
-    
-    func setViewModel() {
-        let diaryEntry = DiaryEntry(date: NSDate())
-        diaryViewModel = DiaryViewModel(entry: diaryEntry)
     }
     
     private func fetchRow(indexPath: NSIndexPath) -> DiaryRow {
@@ -81,11 +81,16 @@ class DiaryTableViewController: UITableViewController {
             cell.notesInputField?.delegate = self
             return cell
         }
-
     }
     
-}
+    @IBAction func done(sender: UIButton) {
+        dismissViewControllerAnimated(true, completion: nil)
+        guard let diaryViewModel = diaryViewModel else { return }
+        delegate?.saveEntry(diaryViewModel)
+    }
+    
 
+}
 
 extension DiaryTableViewController: TimeSleptAlert {
 
@@ -111,7 +116,6 @@ extension DiaryTableViewController: UITextFieldDelegate {
         textField.resignFirstResponder()
         return true
     }
-
     
 }
 
