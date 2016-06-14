@@ -15,6 +15,7 @@ class DiaryButton: UIButton {
         
         // Don't turn the emojis white when in selected state!
         setTitleColor(UIColor.blackColor(), forState: .Selected)
+        
         self.addTarget(self, action: #selector(buttonTapped), forControlEvents: .TouchUpInside)
     }
     

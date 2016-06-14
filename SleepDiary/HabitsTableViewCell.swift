@@ -35,7 +35,11 @@ class HabitsTableViewCell: UITableViewCell, Habits {
     func configure(diaryViewModel: DiaryViewModel) {
         self.diaryViewModel = diaryViewModel
         headerLabel?.text = "Bedtime Habits"
-        
+        setButtonStrings()
+        setSelectedButtons()
+    }
+    
+    private func setButtonStrings() {
         // ???: Create a tighter coupling between buttons and habits
         for habit in habits {
             switch habit {
@@ -53,15 +57,31 @@ class HabitsTableViewCell: UITableViewCell, Habits {
         }
     }
     
+    private func setSelectedButtons() {
+        guard let selectedHabits = diaryViewModel?.habits else { return }
+        for selectedHabit in selectedHabits {
+            switch selectedHabit {
+            case .DrankTea: firstButton?.selected = true
+            case .BathOrShower: secondButton?.selected = true
+            case .ReadBook: thirdButton?.selected = true
+            case .Massage: fourthButton?.selected = true
+            case .NoScreens: fifthButton?.selected = true
+            }
+        }
+    }
+    
     @IBAction func buttonWasTapped(sender: DiaryButton) {
         // Every time a button is tapped, find all buttons that are selected
-        // Get the Habit, then update the view model
+        // Get the associated Habit, then update the view model
         let buttons: [DiaryButton?] = [firstButton, secondButton, thirdButton, fourthButton, fifthButton]
         
         var selectedHabits: [Habit] = []
         for button in buttons {
             guard let button = button else { return }
-            if button.selected {
+            
+            // Selected isn't get set on the currently tapped button until after this func is called
+            // So make sure the sender is added to habits
+            if button.selected || button == sender as DiaryButton {
                 guard let habit = getHabitFromButton(button) else { return }
                 selectedHabits += [habit]
             }
@@ -69,7 +89,7 @@ class HabitsTableViewCell: UITableViewCell, Habits {
         diaryViewModel?.updateHabits(selectedHabits)
     }
     
-    func getHabitFromButton(button: DiaryButton) -> Habit? {
+    private func getHabitFromButton(button: DiaryButton) -> Habit? {
         for habit in habits {
             switch habit {
             case .DrankTea:

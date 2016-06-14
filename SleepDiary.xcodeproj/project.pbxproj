@@ -142,7 +142,6 @@
 				2D649E761D09AC5900727CE8 /* Assets.xcassets */,
 				2D649E781D09AC5900727CE8 /* LaunchScreen.storyboard */,
 				2D649E7B1D09AC5900727CE8 /* Info.plist */,
-				2D649E731D09AC5900727CE8 /* SleepDiary.xcdatamodeld */,
 			);
 			path = SleepDiary;
 			sourceTree = "<group>";
@@ -184,6 +183,7 @@
 				2D649E9D1D09AE6B00727CE8 /* DiaryEntry.swift */,
 				2DEBDDBC1D0D8F3400A4FE22 /* Entry.swift */,
 				2DEBDDBB1D0D8F3400A4FE22 /* Entry+CoreDataProperties.swift */,
+				2D649E731D09AC5900727CE8 /* SleepDiary.xcdatamodeld */,
 			);
 			name = Models;
 			sourceTree = "<group>";

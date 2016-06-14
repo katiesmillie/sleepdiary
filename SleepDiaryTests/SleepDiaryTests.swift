@@ -29,7 +29,6 @@ class SleepDiaryTests: XCTestCase {
         
     }
 
-    
     func testUpdateDate() {
         XCTAssertEqual(date1, diaryViewModel?.date)
         diaryViewModel?.updateDate(date2)
@@ -45,5 +44,7 @@ class SleepDiaryTests: XCTestCase {
         XCTAssertEqual(mood2,  diaryViewModel?.bedtimeMood)
         
     }
+    
+    // TODO: Add tests for other update functions
     
 }

@@ -64,7 +64,6 @@ public class DiaryViewModel {
         diaryEntry = newDiary
     }
     
-    //TODO: Habits are not saving
     public func updateHabits(habits: [Habit]) {
         let newDiary = DiaryEntry(original: diaryEntry, habits: habits)
         diaryEntry = newDiary
