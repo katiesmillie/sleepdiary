@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D27F9111D11F46C00B398FC /* HabitStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D27F90F1D11F46C00B398FC /* HabitStrings.swift */; };
+		2D27F9121D11F46C00B398FC /* HabitStrings+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D27F9101D11F46C00B398FC /* HabitStrings+CoreDataProperties.swift */; };
+		2D27F9151D11F48300B398FC /* MoodStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D27F9131D11F48300B398FC /* MoodStrings.swift */; };
+		2D27F9161D11F48300B398FC /* MoodStrings+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D27F9141D11F48300B398FC /* MoodStrings+CoreDataProperties.swift */; };
+		2D27F9181D12065E00B398FC /* HabitProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D27F9171D12065E00B398FC /* HabitProtocol.swift */; };
+		2D27F91B1D120A9500B398FC /* MoodProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D27F91A1D120A9500B398FC /* MoodProtocol.swift */; };
 		2D649E6D1D09AC5900727CE8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D649E6C1D09AC5900727CE8 /* AppDelegate.swift */; };
 		2D649E6F1D09AC5900727CE8 /* DiaryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D649E6E1D09AC5900727CE8 /* DiaryTableViewController.swift */; };
 		2D649E721D09AC5900727CE8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D649E701D09AC5900727CE8 /* Main.storyboard */; };
@@ -31,6 +37,8 @@
 		2DEBDDC71D0EDF5A00A4FE22 /* Mood.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEBDDC61D0EDF5A00A4FE22 /* Mood.swift */; };
 		2DEBDDC91D0EDF9B00A4FE22 /* TimeSlept.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEBDDC81D0EDF9B00A4FE22 /* TimeSlept.swift */; };
 		2DEBDDCB1D0EDFB300A4FE22 /* Habits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEBDDCA1D0EDFB300A4FE22 /* Habits.swift */; };
+		2DEBDDCD1D10C21600A4FE22 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEBDDCC1D10C21600A4FE22 /* SettingsViewController.swift */; };
+		2DEBDDCF1D10C51000A4FE22 /* CustomStringTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEBDDCE1D10C51000A4FE22 /* CustomStringTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +59,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2D27F90F1D11F46C00B398FC /* HabitStrings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HabitStrings.swift; sourceTree = "<group>"; };
+		2D27F9101D11F46C00B398FC /* HabitStrings+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HabitStrings+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		2D27F9131D11F48300B398FC /* MoodStrings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoodStrings.swift; sourceTree = "<group>"; };
+		2D27F9141D11F48300B398FC /* MoodStrings+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MoodStrings+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		2D27F9171D12065E00B398FC /* HabitProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HabitProtocol.swift; sourceTree = "<group>"; };
+		2D27F91A1D120A9500B398FC /* MoodProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MoodProtocol.swift; path = SleepDiary/MoodProtocol.swift; sourceTree = "<group>"; };
 		2D649E691D09AC5900727CE8 /* SleepDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SleepDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D649E6C1D09AC5900727CE8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2D649E6E1D09AC5900727CE8 /* DiaryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryTableViewController.swift; sourceTree = "<group>"; };
@@ -81,6 +95,8 @@
 		2DEBDDC61D0EDF5A00A4FE22 /* Mood.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mood.swift; sourceTree = "<group>"; };
 		2DEBDDC81D0EDF9B00A4FE22 /* TimeSlept.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeSlept.swift; sourceTree = "<group>"; };
 		2DEBDDCA1D0EDFB300A4FE22 /* Habits.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Habits.swift; sourceTree = "<group>"; };
+		2DEBDDCC1D10C21600A4FE22 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		2DEBDDCE1D10C51000A4FE22 /* CustomStringTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomStringTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +124,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2D27F9191D12066B00B398FC /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				2D27F9171D12065E00B398FC /* HabitProtocol.swift */,
+				2D27F91A1D120A9500B398FC /* MoodProtocol.swift */,
+			);
+			name = Protocols;
+			path = ..;
+			sourceTree = "<group>";
+		};
 		2D649E601D09AC5900727CE8 = {
 			isa = PBXGroup;
 			children = (
@@ -138,6 +164,7 @@
 				2DDDF49E1D0B1D5F00A91E21 /* CustomViews */,
 				2DDDF49C1D0B1D3D00A91E21 /* ViewModels */,
 				2DDDF49B1D0B1D2F00A91E21 /* Models */,
+				2D27F9191D12066B00B398FC /* Protocols */,
 				2DEBDDC51D0EDF3D00A4FE22 /* Types */,
 				2D649E761D09AC5900727CE8 /* Assets.xcassets */,
 				2D649E781D09AC5900727CE8 /* LaunchScreen.storyboard */,
@@ -168,6 +195,7 @@
 			isa = PBXGroup;
 			children = (
 				2DEBDDC31D0DA25200A4FE22 /* EntryCell.swift */,
+				2DEBDDCE1D10C51000A4FE22 /* CustomStringTableViewCell.swift */,
 				2D649EA11D09E34200727CE8 /* DateTableViewCell.swift */,
 				2D649EAD1D0AF3FF00727CE8 /* TimeSleptTableViewCell.swift */,
 				2D649EA31D09E34F00727CE8 /* MoodTableViewCell.swift */,
@@ -181,8 +209,12 @@
 			isa = PBXGroup;
 			children = (
 				2D649E9D1D09AE6B00727CE8 /* DiaryEntry.swift */,
-				2DEBDDBC1D0D8F3400A4FE22 /* Entry.swift */,
 				2DEBDDBB1D0D8F3400A4FE22 /* Entry+CoreDataProperties.swift */,
+				2DEBDDBC1D0D8F3400A4FE22 /* Entry.swift */,
+				2D27F9101D11F46C00B398FC /* HabitStrings+CoreDataProperties.swift */,
+				2D27F90F1D11F46C00B398FC /* HabitStrings.swift */,
+				2D27F9141D11F48300B398FC /* MoodStrings+CoreDataProperties.swift */,
+				2D27F9131D11F48300B398FC /* MoodStrings.swift */,
 				2D649E731D09AC5900727CE8 /* SleepDiary.xcdatamodeld */,
 			);
 			name = Models;
@@ -200,8 +232,9 @@
 		2DDDF49D1D0B1D4900A91E21 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				2D649E6E1D09AC5900727CE8 /* DiaryTableViewController.swift */,
 				2DEBDDBF1D0D975D00A4FE22 /* EntriesTableViewController.swift */,
+				2D649E6E1D09AC5900727CE8 /* DiaryTableViewController.swift */,
+				2DEBDDCC1D10C21600A4FE22 /* SettingsViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -217,8 +250,8 @@
 		2DEBDDC51D0EDF3D00A4FE22 /* Types */ = {
 			isa = PBXGroup;
 			children = (
-				2DEBDDC61D0EDF5A00A4FE22 /* Mood.swift */,
 				2DEBDDC81D0EDF9B00A4FE22 /* TimeSlept.swift */,
+				2DEBDDC61D0EDF5A00A4FE22 /* Mood.swift */,
 				2DEBDDCA1D0EDFB300A4FE22 /* Habits.swift */,
 			);
 			name = Types;
@@ -357,8 +390,13 @@
 			files = (
 				2D649EAC1D0AEB1900727CE8 /* DiaryButton.swift in Sources */,
 				2D649EAA1D0AE9DB00727CE8 /* HabitsTableViewCell.swift in Sources */,
+				2D27F91B1D120A9500B398FC /* MoodProtocol.swift in Sources */,
 				2DEBDDBE1D0D8F3400A4FE22 /* Entry.swift in Sources */,
+				2D27F9181D12065E00B398FC /* HabitProtocol.swift in Sources */,
+				2D27F9151D11F48300B398FC /* MoodStrings.swift in Sources */,
+				2DEBDDCD1D10C21600A4FE22 /* SettingsViewController.swift in Sources */,
 				2D649E751D09AC5900727CE8 /* SleepDiary.xcdatamodeld in Sources */,
+				2D27F9161D11F48300B398FC /* MoodStrings+CoreDataProperties.swift in Sources */,
 				2DEBDDC21D0D9E3700A4FE22 /* DiaryEntriesViewModel.swift in Sources */,
 				2DEBDDC71D0EDF5A00A4FE22 /* Mood.swift in Sources */,
 				2DEBDDC01D0D975D00A4FE22 /* EntriesTableViewController.swift in Sources */,
@@ -367,12 +405,15 @@
 				2D649E9E1D09AE6B00727CE8 /* DiaryEntry.swift in Sources */,
 				2DEBDDBD1D0D8F3400A4FE22 /* Entry+CoreDataProperties.swift in Sources */,
 				2DEBDDCB1D0EDFB300A4FE22 /* Habits.swift in Sources */,
+				2D27F9121D11F46C00B398FC /* HabitStrings+CoreDataProperties.swift in Sources */,
 				2D649EA21D09E34200727CE8 /* DateTableViewCell.swift in Sources */,
 				2D649EA81D0AE4FF00727CE8 /* DiaryViewModel.swift in Sources */,
 				2DEBDDC41D0DA25200A4FE22 /* EntryCell.swift in Sources */,
+				2DEBDDCF1D10C51000A4FE22 /* CustomStringTableViewCell.swift in Sources */,
 				2D649EA41D09E34F00727CE8 /* MoodTableViewCell.swift in Sources */,
 				2D649E6D1D09AC5900727CE8 /* AppDelegate.swift in Sources */,
 				2D649EAE1D0AF3FF00727CE8 /* TimeSleptTableViewCell.swift in Sources */,
+				2D27F9111D11F46C00B398FC /* HabitStrings.swift in Sources */,
 				2DEBDDC91D0EDF9B00A4FE22 /* TimeSlept.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

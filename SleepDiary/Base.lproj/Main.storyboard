@@ -381,7 +381,133 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z64-c3-ehe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1252" y="587"/>
+            <point key="canvasLocation" x="1271" y="580"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="Ybk-VL-Kbv">
+            <objects>
+                <tableViewController id="7BB-Z4-YSE" customClass="SettingsViewController" customModule="SleepDiary" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="fN1-QM-5L0">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="CustomStringTableViewCell" rowHeight="130" id="X03-V5-5GS" customClass="CustomStringTableViewCell" customModule="SleepDiary" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="130"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="X03-V5-5GS" id="UxJ-sX-dBJ">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="129"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lQx-7D-0wh">
+                                            <rect key="frame" x="14" y="8" width="556" height="17"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="pSn-aA-lb9">
+                                            <rect key="frame" x="16" y="33" width="556" height="45"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="😖" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Sd-kv-dBE">
+                                                    <rect key="frame" x="0.0" y="0.0" width="110" height="45"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="yNx-EU-Lny"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="🙄" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lq0-PU-vjC">
+                                                    <rect key="frame" x="112" y="0.0" width="109" height="45"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="IC6-pJ-XnF"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="😴" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gyr-km-FOr">
+                                                    <rect key="frame" x="223" y="0.0" width="110" height="45"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="dG5-Dt-Ly7"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="☺️" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GuR-Xz-bFQ">
+                                                    <rect key="frame" x="335" y="0.0" width="109" height="45"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="6aY-zR-cJB"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="😝" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rtf-76-WXv">
+                                                    <rect key="frame" x="446" y="0.0" width="110" height="45"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="Hxz-EA-6wC"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="pSn-aA-lb9" firstAttribute="top" secondItem="lQx-7D-0wh" secondAttribute="bottom" constant="8" id="4Y6-3v-gpe"/>
+                                        <constraint firstAttribute="topMargin" secondItem="lQx-7D-0wh" secondAttribute="top" id="X06-ad-Aaf"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="pSn-aA-lb9" secondAttribute="trailing" constant="20" id="ab3-vP-FWb"/>
+                                        <constraint firstItem="pSn-aA-lb9" firstAttribute="leading" secondItem="UxJ-sX-dBJ" secondAttribute="leadingMargin" constant="8" id="rvs-5L-zvD"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="lQx-7D-0wh" secondAttribute="trailing" constant="22" id="t2n-wb-tmN"/>
+                                        <constraint firstItem="lQx-7D-0wh" firstAttribute="leading" secondItem="UxJ-sX-dBJ" secondAttribute="leadingMargin" constant="6" id="xAc-93-dr4"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="headerLabel" destination="lQx-7D-0wh" id="Jmk-se-dBI"/>
+                                    <outlet property="string1" destination="1Sd-kv-dBE" id="oC6-9J-vQZ"/>
+                                    <outlet property="string2" destination="lq0-PU-vjC" id="BIk-zS-ByI"/>
+                                    <outlet property="string3" destination="Gyr-km-FOr" id="tgD-KY-EaD"/>
+                                    <outlet property="string4" destination="GuR-Xz-bFQ" id="KSE-j2-SOM"/>
+                                    <outlet property="string5" destination="Rtf-76-WXv" id="0NX-CV-ZPk"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="7BB-Z4-YSE" id="pIX-Jl-mFg"/>
+                            <outlet property="delegate" destination="7BB-Z4-YSE" id="2Og-xP-Icc"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Settings" id="leg-48-ML6">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="6rv-5V-d5n">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="HVj-F8-KgW">
+                                <rect key="frame" x="530" y="7" width="50" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="save:" destination="7BB-Z4-YSE" eventType="touchUpInside" id="6Dp-nl-Urf"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g5k-fZ-Btc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1279" y="1372"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="91R-0o-n1b">
+            <objects>
+                <navigationController id="tPC-la-FFG" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="mWf-iR-MYa">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="7BB-Z4-YSE" kind="relationship" relationship="rootViewController" id="vfR-to-g7m"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WNt-Ut-rml" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="598" y="1372"/>
         </scene>
         <!--Sleep Diary-->
         <scene sceneID="B6D-5a-pqW">
@@ -422,7 +548,19 @@
                             <outlet property="delegate" destination="UbW-Nc-fdY" id="ww2-YC-dVY"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Sleep Diary" id="xi8-pq-E4H"/>
+                    <navigationItem key="navigationItem" title="Sleep Diary" id="xi8-pq-E4H">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="6i6-4X-UXk">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="3DV-yu-gkY">
+                                <rect key="frame" x="530" y="7" width="50" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <state key="normal" title="Settings"/>
+                                <connections>
+                                    <segue destination="tPC-la-FFG" kind="presentation" id="6Tc-ia-A3l"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <segue destination="LHr-J9-JpF" kind="presentation" identifier="Open Entry" id="Yh1-gt-ZXh"/>
                     </connections>
