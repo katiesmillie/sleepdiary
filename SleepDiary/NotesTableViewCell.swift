@@ -20,15 +20,12 @@ class NotesTableViewCell: UITableViewCell {
         return cell
     }
     
-    
     func configure(diaryViewModel: DiaryViewModel) {
         self.diaryViewModel = diaryViewModel
         headerLabel?.text = "Notes"
+        notesInputField?.text = diaryViewModel.notes
     }
 
-    
-    // TODO: Save notes when done editing probably in UITextFieldDelegate
-    
 }
 
 

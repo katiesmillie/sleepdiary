@@ -8,7 +8,23 @@
         <attribute name="timeSlept" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="wakeUpMood" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
     </entity>
+    <entity name="HabitStrings" representedClassName=".HabitStrings" syncable="YES">
+        <attribute name="habit1" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="habit2" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="habit3" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="habit4" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="habit5" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="MoodStrings" representedClassName=".MoodStrings" syncable="YES">
+        <attribute name="mood1" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="mood2" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="mood3" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="mood4" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="mood5" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <elements>
         <element name="Entry" positionX="-63" positionY="-18" width="128" height="135"/>
+        <element name="MoodStrings" positionX="-36" positionY="54" width="128" height="120"/>
+        <element name="HabitStrings" positionX="-9" positionY="63" width="128" height="120"/>
     </elements>
 </model>

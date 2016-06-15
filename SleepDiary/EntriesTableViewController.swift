@@ -15,7 +15,7 @@ class EntriesTableViewController: UITableViewController {
     var diaryEntries: [DiaryViewModel] = []
     var selectedIndexPath: NSIndexPath?
     
-    var managedObjectContext : NSManagedObjectContext? {
+    var managedObjectContext: NSManagedObjectContext? {
         guard let appDelegate = UIApplication.sharedApplication().delegate as? AppDelegate else { return nil }
         return appDelegate.managedObjectContext
     }
@@ -176,7 +176,7 @@ extension EntriesTableViewController: DiaryTableViewDelegate {
         entry.setValue(diaryViewModel.timeSlept?.totalMinutes, forKey: "timeSlept")
         entry.setValue(diaryViewModel.bedtimeMood?.rawValue, forKey: "bedtimeMood")
         entry.setValue(diaryViewModel.wakeUpMood?.rawValue, forKey: "wakeUpMood")
-        let mappedHabits = diaryViewModel.habits?.map{ $0.rawValue }
+        let mappedHabits = diaryViewModel.habits?.map{ $0.rawValue() }
         entry.setValue(mappedHabits, forKey: "habits")
         entry.setValue(diaryViewModel.notes, forKey: "notes")
                 
