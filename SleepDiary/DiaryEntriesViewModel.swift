@@ -44,7 +44,7 @@ public class DiaryEntriesViewModel {
         }
         
         if let habitsAsInt = entry.habits as? [Int] {
-            habits = habitsAsInt.flatMap{ Habit(rawValue: $0) }
+            habits = habitsAsInt.flatMap{ try? Habit(index: $0, string: "") }
         }
         let notes = entry.notes
         

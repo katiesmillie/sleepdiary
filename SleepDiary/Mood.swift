@@ -8,6 +8,8 @@
 
 import Foundation
 
+//TODO: Update Mood to match Habit enum pattern with associated values
+
 public enum Mood {
     
     // Experimenting with nested Enums

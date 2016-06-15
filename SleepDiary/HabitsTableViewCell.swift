@@ -22,37 +22,33 @@ class HabitsTableViewCell: UITableViewCell, Habits {
     @IBOutlet weak var headerLabel: UILabel?
     
     var diaryViewModel: DiaryViewModel?
-    
-    var habits: [Habit] {
-        return [.DrankTea, .BathOrShower, .ReadBook, .Massage, .NoScreens]
-    }
-    
+
     class func cell(tableView: UITableView) -> HabitsTableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("HabitsTableViewCell") as! HabitsTableViewCell
         return cell
     }
     
-    func configure(diaryViewModel: DiaryViewModel) {
+    func configure(diaryViewModel: DiaryViewModel, habits: [Habit]) {
         self.diaryViewModel = diaryViewModel
         headerLabel?.text = "Bedtime Habits"
-        setButtonStrings()
+        setButtonStrings(getHabitStrings(habits))
         setSelectedButtons()
     }
     
-    private func setButtonStrings() {
+    private func setButtonStrings(strings: [String]) {
         // ???: Create a tighter coupling between buttons and habits
         for habit in habits {
             switch habit {
             case .DrankTea:
-                firstButton?.setTitle(habit.string(), forState: UIControlState.Normal)
+                firstButton?.setTitle(strings[0], forState: UIControlState.Normal)
             case .BathOrShower:
-                secondButton?.setTitle(habit.string(), forState: UIControlState.Normal)
+                secondButton?.setTitle(strings[1], forState: UIControlState.Normal)
             case .ReadBook:
-                thirdButton?.setTitle(habit.string(), forState: UIControlState.Normal)
+                thirdButton?.setTitle(strings[2], forState: UIControlState.Normal)
             case .Massage:
-                fourthButton?.setTitle(habit.string(), forState: UIControlState.Normal)
+                fourthButton?.setTitle(strings[3], forState: UIControlState.Normal)
             case .NoScreens:
-                fifthButton?.setTitle(habit.string(), forState: UIControlState.Normal)
+                fifthButton?.setTitle(strings[4], forState: UIControlState.Normal)
             }
         }
     }
@@ -90,27 +86,27 @@ class HabitsTableViewCell: UITableViewCell, Habits {
     }
     
     private func getHabitFromButton(button: DiaryButton) -> Habit? {
-        for habit in habits {
+            for habit in habits {
             switch habit {
-            case .DrankTea:
-                if button.titleLabel?.text == habit.string() {
-                    return .DrankTea
+            case let .DrankTea(string):
+                if button.titleLabel?.text == string {
+                    return .DrankTea(string)
                 }
-            case .BathOrShower:
-                if button.titleLabel?.text == habit.string() {
-                    return .BathOrShower
+            case let .BathOrShower(string):
+                if button.titleLabel?.text == string {
+                    return .BathOrShower(string)
                 }
-            case .ReadBook:
-                if button.titleLabel?.text == habit.string() {
-                    return .ReadBook
+            case let .ReadBook(string):
+                if button.titleLabel?.text == string {
+                    return .ReadBook(string)
                 }
-            case .Massage:
-                if button.titleLabel?.text == habit.string() {
-                    return .Massage
+            case let .Massage(string):
+                if button.titleLabel?.text == string {
+                    return .Massage(string)
                 }
-            case .NoScreens:
-                if button.titleLabel?.text == habit.string() {
-                    return .NoScreens
+            case let .NoScreens(string):
+                if button.titleLabel?.text == string {
+                    return .NoScreens(string)
                 }
             }
         }
