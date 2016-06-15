@@ -8,11 +8,7 @@
 
 import UIKit
 
-protocol Habits {
-    var habits: [Habit] { get }
-}
-
-class HabitsTableViewCell: UITableViewCell, Habits {
+class HabitsTableViewCell: UITableViewCell, HabitProtocol {
     
     @IBOutlet weak var firstButton: DiaryButton?
     @IBOutlet weak var secondButton: DiaryButton?

@@ -8,21 +8,7 @@
 
 import UIKit
 
-protocol Moods {
-    var moods: [Mood.MoodRating] { get }
-}
-
-
-// Playing with protocol extensions, however default value could just as easily
-// be set in the cell as it's not used outside of that scope (so far)
-
-extension Moods {
-    var moods: [Mood.MoodRating] {
-        return [.Anxious, .Cranky, .Relaxed, .Happy, .Energetic]
-    }
-}
-
-class MoodTableViewCell: UITableViewCell, Moods {
+class MoodTableViewCell: UITableViewCell, MoodProtocol {
     
     @IBOutlet weak var firstButton: DiaryButton?
     @IBOutlet weak var secondButton: DiaryButton?
