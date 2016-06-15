@@ -20,16 +20,18 @@ class MoodTableViewCell: UITableViewCell, MoodProtocol {
     
     var diaryViewModel: DiaryViewModel?
     var moodType: Mood.MoodType?
-        
+    
     class func cell(tableView: UITableView) -> MoodTableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("MoodTableViewCell") as! MoodTableViewCell
         return cell
     }
     
-    func configure(diaryViewModel: DiaryViewModel, moodType: Mood.MoodType) {
+    func configure(diaryViewModel: DiaryViewModel, moodType: Mood.MoodType, strings: [String]) {
         self.diaryViewModel = diaryViewModel
         self.moodType = moodType
-        
+
+        setButtonStrings(strings)
+
         var setMood: Mood.MoodRating
         
         switch moodType {
@@ -42,7 +44,7 @@ class MoodTableViewCell: UITableViewCell, MoodProtocol {
             guard let mood = diaryViewModel.wakeUpMood else { return }
             setMood = mood
         }
-   
+        
         switch setMood {
         case .Anxious: firstButton?.selected = true
         case .Cranky: secondButton?.selected = true
@@ -50,23 +52,23 @@ class MoodTableViewCell: UITableViewCell, MoodProtocol {
         case .Happy: fourthButton?.selected = true
         case .Energetic: fifthButton?.selected = true
         }
-        
+    }
+    
+    func setButtonStrings(strings: [String]){
         for mood in moods {
             switch mood {
             case .Anxious:
-                firstButton?.setTitle(mood.string(), forState: UIControlState.Normal)
+                firstButton?.setTitle(strings[0], forState: UIControlState.Normal)
             case .Cranky:
-                secondButton?.setTitle(mood.string(), forState: UIControlState.Normal)
+                secondButton?.setTitle(strings[1], forState: UIControlState.Normal)
             case .Relaxed:
-                thirdButton?.setTitle(mood.string(), forState: UIControlState.Normal)
+                thirdButton?.setTitle(strings[2], forState: UIControlState.Normal)
             case .Happy:
-                fourthButton?.setTitle(mood.string(), forState: UIControlState.Normal)
+                fourthButton?.setTitle(strings[3], forState: UIControlState.Normal)
             case .Energetic:
-                fifthButton?.setTitle(mood.string(), forState: UIControlState.Normal)
+                fifthButton?.setTitle(strings[4], forState: UIControlState.Normal)
             }
         }
-
-        
     }
     
     @IBAction func buttonWasTapped(sender: DiaryButton) {
@@ -74,8 +76,7 @@ class MoodTableViewCell: UITableViewCell, MoodProtocol {
         let filteredButtons = buttons.filter { $0?.titleLabel?.text == sender.titleLabel?.text }
         guard let buttonTapped = filteredButtons.first else { return }
         
-        
-        // If another button is selected, unselect it 
+        // If another button is selected, unselect it
         // Since only one mood will be saved
         for button in buttons {
             if button != buttonTapped {
@@ -114,12 +115,10 @@ class MoodTableViewCell: UITableViewCell, MoodProtocol {
                 }
             }
         }
-        
-    }
-    
+    }    
     
 }
 
- 
-    
+
+
 
