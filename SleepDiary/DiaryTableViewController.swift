@@ -83,6 +83,7 @@ class DiaryTableViewController: UITableViewController, MoodProtocol, HabitProtoc
             return cell
         case .Habits:
             let cell = HabitsTableViewCell.cell(tableView)
+            guard let habits = habits else { return defaultCell }
             cell.configure(diaryViewModel, habits: habits)
             return cell
         case .Notes:

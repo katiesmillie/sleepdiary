@@ -33,7 +33,7 @@ class HabitsTableViewCell: UITableViewCell, HabitProtocol {
     
     private func setButtonStrings(strings: [String]) {
         // ???: Create a tighter coupling between buttons and habits
-        for habit in habits {
+        for habit in defaultHabits {
             switch habit {
             case .DrankTea:
                 firstButton?.setTitle(strings[0], forState: UIControlState.Normal)
@@ -82,7 +82,7 @@ class HabitsTableViewCell: UITableViewCell, HabitProtocol {
     }
     
     private func getHabitFromButton(button: DiaryButton) -> Habit? {
-            for habit in habits {
+            for habit in defaultHabits {
             switch habit {
             case let .DrankTea(string):
                 if button.titleLabel?.text == string {
