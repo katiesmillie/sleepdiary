@@ -138,7 +138,7 @@ class SettingsViewController: UITableViewController, MoodProtocol, HabitProtocol
             habitStringsObject = NSManagedObject(entity: entity, insertIntoManagedObjectContext: managedObjectContext)
         }
         // Get the default strings in case the user hasn't saved any
-        let defaultHabitStrings = getHabitStrings(habits)
+        let defaultHabitStrings = getHabitStrings(defaultHabits)
         let habitStringsToSave = habitStrings ?? defaultHabitStrings
         
         habitStringsObject?.setValue(habitStringsToSave[0], forKey: "habit1")

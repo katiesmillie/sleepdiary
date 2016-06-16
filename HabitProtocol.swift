@@ -9,13 +9,13 @@
 import Foundation
 
 protocol HabitProtocol {
-    var habits: [Habit] { get }
+    var defaultHabits: [Habit] { get }
     func getHabitStrings(habits: [Habit]) -> [String]
     func getHabitsFromStrings(strings: [String]) -> [Habit]
 }
 
 extension HabitProtocol {
-    var habits: [Habit] {
+    var defaultHabits: [Habit] {
         return [.DrankTea("🍵"),.BathOrShower("🛁"),.ReadBook("📚"),.Massage("🎾"),.NoScreens("🚫📱")]
     }
     
@@ -41,7 +41,7 @@ extension HabitProtocol {
     func getHabitsFromStrings(strings: [String]) -> [Habit] {
         var newHabits: [Habit] = []
         
-        for habit in habits {
+        for habit in defaultHabits {
             switch habit {
             case .DrankTea:
                 guard let habit = try? Habit(index: 1, string: strings[0]) else { return newHabits }
