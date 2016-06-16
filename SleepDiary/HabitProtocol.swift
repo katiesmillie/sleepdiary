@@ -16,7 +16,7 @@ protocol HabitProtocol {
 
 extension HabitProtocol {
     var defaultHabits: [Habit] {
-        return [.DrankTea("🍵"),.BathOrShower("🛁"),.ReadBook("📚"),.Massage("🎾"),.NoScreens("🚫📱")]
+        return [.DrankTea("🍵"),.BathOrShower("🛁"),.ReadBook("📚"),.Massage("🎾"),.NoScreens("📱")]
     }
     
     func getHabitStrings(habits: [Habit]) -> [String] {

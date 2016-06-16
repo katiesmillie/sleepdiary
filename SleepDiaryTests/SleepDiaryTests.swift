@@ -21,8 +21,8 @@ class SleepDiaryTests: XCTestCase {
         super.setUp()
 
         let timeSlept = TimeSlept(totalMinutes: 480)
-        let habits: [Habit]? = [.ReadBook, .NoScreens]
-        let notes = "Hello"
+        let habits: [Habit]? = [.ReadBook("📚"), .NoScreens("🚫📱")]
+        let notes = "Slept like a rock"
         let diaryEntry = DiaryEntry(date: date1, timeSlept:timeSlept, bedtimeMood: mood1, wakeUpMood: mood2, habits: habits , notes: notes)
         
         diaryViewModel = DiaryViewModel(entry: diaryEntry)

@@ -406,10 +406,10 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="pSn-aA-lb9">
-                                            <rect key="frame" x="16" y="33" width="556" height="45"/>
+                                            <rect key="frame" x="16" y="33" width="568" height="45"/>
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="😖" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Sd-kv-dBE">
-                                                    <rect key="frame" x="0.0" y="0.0" width="110" height="45"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="112" height="45"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="yNx-EU-Lny"/>
                                                     </constraints>
@@ -417,7 +417,7 @@
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="🙄" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lq0-PU-vjC">
-                                                    <rect key="frame" x="112" y="0.0" width="109" height="45"/>
+                                                    <rect key="frame" x="114" y="0.0" width="112" height="45"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="IC6-pJ-XnF"/>
                                                     </constraints>
@@ -425,7 +425,7 @@
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="😴" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gyr-km-FOr">
-                                                    <rect key="frame" x="223" y="0.0" width="110" height="45"/>
+                                                    <rect key="frame" x="228" y="0.0" width="112" height="45"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="dG5-Dt-Ly7"/>
                                                     </constraints>
@@ -433,7 +433,7 @@
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="☺️" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GuR-Xz-bFQ">
-                                                    <rect key="frame" x="335" y="0.0" width="109" height="45"/>
+                                                    <rect key="frame" x="342" y="0.0" width="112" height="45"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="6aY-zR-cJB"/>
                                                     </constraints>
@@ -441,7 +441,7 @@
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="😝" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rtf-76-WXv">
-                                                    <rect key="frame" x="446" y="0.0" width="110" height="45"/>
+                                                    <rect key="frame" x="456" y="0.0" width="112" height="45"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="Hxz-EA-6wC"/>
                                                     </constraints>
@@ -454,7 +454,7 @@
                                     <constraints>
                                         <constraint firstItem="pSn-aA-lb9" firstAttribute="top" secondItem="lQx-7D-0wh" secondAttribute="bottom" constant="8" id="4Y6-3v-gpe"/>
                                         <constraint firstAttribute="topMargin" secondItem="lQx-7D-0wh" secondAttribute="top" id="X06-ad-Aaf"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="pSn-aA-lb9" secondAttribute="trailing" constant="20" id="ab3-vP-FWb"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="pSn-aA-lb9" secondAttribute="trailing" constant="8" id="ab3-vP-FWb"/>
                                         <constraint firstItem="pSn-aA-lb9" firstAttribute="leading" secondItem="UxJ-sX-dBJ" secondAttribute="leadingMargin" constant="8" id="rvs-5L-zvD"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="lQx-7D-0wh" secondAttribute="trailing" constant="22" id="t2n-wb-tmN"/>
                                         <constraint firstItem="lQx-7D-0wh" firstAttribute="leading" secondItem="UxJ-sX-dBJ" secondAttribute="leadingMargin" constant="6" id="xAc-93-dr4"/>

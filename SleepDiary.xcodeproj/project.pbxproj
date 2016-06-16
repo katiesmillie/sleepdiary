@@ -11,8 +11,8 @@
 		2D27F9121D11F46C00B398FC /* HabitStrings+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D27F9101D11F46C00B398FC /* HabitStrings+CoreDataProperties.swift */; };
 		2D27F9151D11F48300B398FC /* MoodStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D27F9131D11F48300B398FC /* MoodStrings.swift */; };
 		2D27F9161D11F48300B398FC /* MoodStrings+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D27F9141D11F48300B398FC /* MoodStrings+CoreDataProperties.swift */; };
-		2D27F9181D12065E00B398FC /* HabitProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D27F9171D12065E00B398FC /* HabitProtocol.swift */; };
 		2D27F91B1D120A9500B398FC /* MoodProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D27F91A1D120A9500B398FC /* MoodProtocol.swift */; };
+		2D4E38421D12A36300A7B5D1 /* HabitProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4E38411D12A36300A7B5D1 /* HabitProtocol.swift */; };
 		2D649E6D1D09AC5900727CE8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D649E6C1D09AC5900727CE8 /* AppDelegate.swift */; };
 		2D649E6F1D09AC5900727CE8 /* DiaryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D649E6E1D09AC5900727CE8 /* DiaryTableViewController.swift */; };
 		2D649E721D09AC5900727CE8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D649E701D09AC5900727CE8 /* Main.storyboard */; };
@@ -63,8 +63,8 @@
 		2D27F9101D11F46C00B398FC /* HabitStrings+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HabitStrings+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		2D27F9131D11F48300B398FC /* MoodStrings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoodStrings.swift; sourceTree = "<group>"; };
 		2D27F9141D11F48300B398FC /* MoodStrings+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MoodStrings+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		2D27F9171D12065E00B398FC /* HabitProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HabitProtocol.swift; sourceTree = "<group>"; };
 		2D27F91A1D120A9500B398FC /* MoodProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MoodProtocol.swift; path = SleepDiary/MoodProtocol.swift; sourceTree = "<group>"; };
+		2D4E38411D12A36300A7B5D1 /* HabitProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HabitProtocol.swift; path = SleepDiary/HabitProtocol.swift; sourceTree = "<group>"; };
 		2D649E691D09AC5900727CE8 /* SleepDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SleepDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D649E6C1D09AC5900727CE8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2D649E6E1D09AC5900727CE8 /* DiaryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryTableViewController.swift; sourceTree = "<group>"; };
@@ -127,7 +127,7 @@
 		2D27F9191D12066B00B398FC /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				2D27F9171D12065E00B398FC /* HabitProtocol.swift */,
+				2D4E38411D12A36300A7B5D1 /* HabitProtocol.swift */,
 				2D27F91A1D120A9500B398FC /* MoodProtocol.swift */,
 			);
 			name = Protocols;
@@ -392,7 +392,7 @@
 				2D649EAA1D0AE9DB00727CE8 /* HabitsTableViewCell.swift in Sources */,
 				2D27F91B1D120A9500B398FC /* MoodProtocol.swift in Sources */,
 				2DEBDDBE1D0D8F3400A4FE22 /* Entry.swift in Sources */,
-				2D27F9181D12065E00B398FC /* HabitProtocol.swift in Sources */,
+				2D4E38421D12A36300A7B5D1 /* HabitProtocol.swift in Sources */,
 				2D27F9151D11F48300B398FC /* MoodStrings.swift in Sources */,
 				2DEBDDCD1D10C21600A4FE22 /* SettingsViewController.swift in Sources */,
 				2D649E751D09AC5900727CE8 /* SleepDiary.xcdatamodeld in Sources */,

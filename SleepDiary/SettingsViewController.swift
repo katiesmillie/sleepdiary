@@ -140,6 +140,7 @@ class SettingsViewController: UITableViewController, MoodProtocol, HabitProtocol
         // Get the default strings in case the user hasn't saved any
         let defaultHabitStrings = getHabitStrings(defaultHabits)
         let habitStringsToSave = habitStrings ?? defaultHabitStrings
+        habitStrings = defaultHabitStrings
         
         habitStringsObject?.setValue(habitStringsToSave[0], forKey: "habit1")
         habitStringsObject?.setValue(habitStringsToSave[1], forKey: "habit2")

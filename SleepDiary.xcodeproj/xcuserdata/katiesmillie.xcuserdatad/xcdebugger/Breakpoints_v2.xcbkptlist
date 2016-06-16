@@ -41,13 +41,61 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "SleepDiary/DiaryTableViewController.swift"
-            timestampString = "487737046.747369"
+            filePath = "SleepDiary/SettingsViewController.swift"
+            timestampString = "487761349.424417"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "134"
-            endingLineNumber = "134"
-            landmarkName = "fetchStrings()"
+            startingLineNumber = "142"
+            endingLineNumber = "142"
+            landmarkName = "saveHabitStrings()"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SleepDiary.SettingsViewController.saveHabitStrings () -&gt; ()"
+                  moduleName = "SleepDiary"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/katiesmillie/Dropbox/swift/projects/SleepDiary/SleepDiary/SettingsViewController.swift"
+                  timestampString = "487761545.094131"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "142"
+                  endingLineNumber = "142"
+                  offsetFromSymbolStart = "1745">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SleepDiary.SettingsViewController.saveHabitStrings () -&gt; ()"
+                  moduleName = "SleepDiary"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/katiesmillie/Dropbox/swift/projects/SleepDiary/SleepDiary/SettingsViewController.swift"
+                  timestampString = "487761545.094289"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "142"
+                  endingLineNumber = "142"
+                  offsetFromSymbolStart = "1887">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SleepDiary/SettingsViewController.swift"
+            timestampString = "487761230.160193"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
+            landmarkName = "tableView(_:cellForRowAtIndexPath:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -57,14 +105,46 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "SleepDiary/HabitsTableViewCell.swift"
-            timestampString = "487736897.826631"
+            filePath = "SleepDiary/SettingsViewController.swift"
+            timestampString = "487761349.424417"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
-            landmarkName = "configure(_:habits:)"
+            startingLineNumber = "169"
+            endingLineNumber = "169"
+            landmarkName = "saveCurrentStrings()"
             landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SleepDiary.SettingsViewController.(saveCurrentStrings in _27A3589C7FE89E03ACADCD45E74F7C06) () -&gt; ()"
+                  moduleName = "SleepDiary"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/katiesmillie/Dropbox/swift/projects/SleepDiary/SleepDiary/SettingsViewController.swift"
+                  timestampString = "487761545.096196"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "169"
+                  endingLineNumber = "169"
+                  offsetFromSymbolStart = "4000">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SleepDiary.SettingsViewController.((saveCurrentStrings in _27A3589C7FE89E03ACADCD45E74F7C06) () -&gt; ()).(closure #2)"
+                  moduleName = "SleepDiary"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/katiesmillie/Dropbox/swift/projects/SleepDiary/SleepDiary/SettingsViewController.swift"
+                  timestampString = "487761545.096379"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "169"
+                  endingLineNumber = "169"
+                  offsetFromSymbolStart = "43">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
